@@ -1,7 +1,7 @@
 # TODO
 
 ## VERSION 0.0.1 (In progress)
-- Add a `README.md` file
+- [x] Add a `README.md` file
 - Add a `LICENSE` file
 - Add the ability to change background audio
 - Add the ability to disable background audio
