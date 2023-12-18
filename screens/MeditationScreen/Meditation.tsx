@@ -1,16 +1,13 @@
 import React, {useEffect, useRef, useState} from "react";
-import {CountdownProps, MeditationTimerProps} from "../../types";
-import {timer} from "../../utils/timerUtils";
+import {CountdownProps, MeditationTimerProps} from "@types";
 import {Text, View} from "react-native";
 import {Circle, Svg} from "react-native-svg";
-import {fadeIn, fadeOut, loadSound} from "../../utils/soundUtils";
 import {StatusBar} from "expo-status-bar";
 import {BigStartButton, ControlPanel, ResetButton} from "./ControlPanel";
 import {StyleSheet} from "react-native";
-import {fontTheme, styles, theme} from "../../styles/theme";
-import {reset} from "react-native-svg/lib/typescript/lib/Matrix2D";
-import {WaveLine} from "../../components/shared/WaveLine";
-import {Wave} from "../../assets/audio";
+import {fadeIn, fadeOut, loadSound, timer} from "@utils";
+import {fontTheme, styles, theme} from "@styles";
+
 
 
 const MeditationTimer: React.FC<MeditationTimerProps> = (props) => {

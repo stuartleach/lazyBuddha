@@ -3,10 +3,21 @@ module.exports = function (api) {
     return {
         presets: ['babel-preset-expo', 'module:metro-react-native-babel-preset'],
         plugins: [
-            'nativewind/babel', // Add this line
+            'nativewind/babel',
             '@babel/plugin-proposal-export-namespace-from',
+            [
+                'module-resolver',
+                {
+                    root: ['./'],
+                    alias: {
+                        "@utils": "./utils",
+                        "@styles": "./styles",
+                        "@screens": "./screens",
+                        "@components": "./components",
+                    },
+                },
+            ],
             'react-native-reanimated/plugin',
         ],
     }
-
-};
+}

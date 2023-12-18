@@ -5,181 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/debug.keystore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/debug/java/com/anonymous/lazyBuddha/ReactNativeFlipper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/anonymous/lazyBuddha/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/anonymous/lazyBuddha/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-hdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-mdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxxhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/rn_edit_text_material.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/splashscreen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/release/java/com/anonymous/lazyBuddha/ReactNativeFlipper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/01_ocean.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/02_sea_iceland.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/03_flow_france.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/04_wave_iceland.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/declarations.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Auto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Geologica_Cursive-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/LexendDeca-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/SpaceMono-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Staatliches-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/declarations.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/shared/BuddhaButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/shared/WaveLine.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/.xcode.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile.properties.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha.xcodeproj/xcshareddata/xcschemes/lazyBuddha.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/AppDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/AppDelegate.mm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/AppIcon.appiconset/App-Icon-1024x1024@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/SplashScreen.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/SplashScreen.imageset/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/SplashScreenBackground.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Images.xcassets/SplashScreenBackground.imageset/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/SplashScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/Supporting/Expo.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/lazyBuddha-Bridging-Header.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/lazyBuddha.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/main.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/lazyBuddha/noop-file.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/MeditationScreen/AnimationTest.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/MeditationScreen/CircularProgress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/soundUtils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/timerUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lazyBuddha.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/BackgroundZenCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/archive/BackgroundZenCircle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/BackgroundZenCircle.psd" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/BackgroundZenCircle.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/BackgroundZenCircleOLD.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/archive/BackgroundZenCircleOLD.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Beep.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/audio/00 - beep.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Flower.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Flower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/adaptive-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/splash2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Countdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MeditationTimer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,6 +126,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "npm.ios.executor": "Run",
+    "npm.start --clear.executor": "Run",
     "npm.start.executor": "Run",
     "npm.web.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -318,7 +151,7 @@
       <recent name="$PROJECT_DIR$/BuddhaButton.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.start --clear">
     <configuration name="ios" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -329,12 +162,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start --clear" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
       </scripts>
+      <arguments value="--clear" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
@@ -349,9 +183,14 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.ios" />
+      <item itemvalue="npm.start --clear" />
+      <item itemvalue="npm.web" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start --clear" />
         <item itemvalue="npm.web" />
         <item itemvalue="npm.ios" />
       </list>
@@ -373,7 +212,7 @@
       <workItem from="1702221900829" duration="241000" />
       <workItem from="1702665112763" duration="141000" />
       <workItem from="1702752695412" duration="13324000" />
-      <workItem from="1702835352920" duration="32852000" />
+      <workItem from="1702835352920" duration="34928000" />
     </task>
     <servers />
   </component>

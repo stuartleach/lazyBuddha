@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from "react-native";
 import {BigStartButtonProps, ControlsProps} from "../../types";
 import React, {useState} from "react";
 import RNPickerSelect from "react-native-picker-select";
-import {SoundTitle} from "../../utils/soundUtils";
+import {SoundTitle} from "../../utils";
 import {fontTheme, theme} from "../../styles/theme";
 
 const buttonRadius = 10;
