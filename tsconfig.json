@@ -12,54 +12,54 @@
       "@components/*": [
         "components/*"
       ],
-        "@components": [
-            "components"
-        ],
+      "@components": [
+        "components"
+      ],
       "@screens/*": [
         "screens/*"
       ],
-        "@screens": [
-            "screens"
-        ],
+      "@screens": [
+        "screens"
+      ],
       "@navigation/*": [
         "navigation/*"
       ],
-        "@navigation": [
-            "navigation"
-        ],
+      "@navigation": [
+        "navigation"
+      ],
       "@assets/*": [
         "assets/*"
       ],
-        "@assets": [
-            "assets"
-        ],
+      "@assets": [
+        "assets"
+      ],
       "@constants/*": [
         "constants/*"
       ],
-        "@constants": [
-            "constants"
-        ],
+      "@constants": [
+        "constants"
+      ],
       "@hooks/*": [
         "hooks/*"
       ],
-        "@hooks": [
-            "hooks"
-        ],
+      "@hooks": [
+        "hooks"
+      ],
       "@types/*": [
         "types/*"
       ],
-        "@types": [
-            "types"
-        ],
+      "@types": [
+        "types"
+      ],
       "@styles/*": [
         "styles/*"
       ],
-        "@styles": [
-            "styles"
-        ],
+      "@styles": [
+        "styles"
+      ]
       // Adjust the path according to your project structure
     }
   },
   "extends": "expo/tsconfig.base"
 }
-}
+

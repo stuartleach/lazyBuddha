@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/buildOLD/generated/ios/FBReactNativeSpec/FBReactNativeSpec-generated.mm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/buildOLD/generated/ios/FBReactNativeSpec/FBReactNativeSpec.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/buildOLD/generated/ios/React-Codegen.podspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/lazyBuddha.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/lazyBuddha.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,8 +133,11 @@
     "npm.start --clear.executor": "Run",
     "npm.start.executor": "Run",
     "npm.web.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/stuartleach/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -212,7 +219,9 @@
       <workItem from="1702221900829" duration="241000" />
       <workItem from="1702665112763" duration="141000" />
       <workItem from="1702752695412" duration="13324000" />
-      <workItem from="1702835352920" duration="34928000" />
+      <workItem from="1702835352920" duration="36994000" />
+      <workItem from="1702933826606" duration="253000" />
+      <workItem from="1702934100288" duration="727000" />
     </task>
     <servers />
   </component>
@@ -228,7 +237,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/utils/soundUtils.ts</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
