@@ -6,6 +6,9 @@
       "@utils/*": [
         "utils/*"
       ],
+      "@fonts/*": [
+        "assets/fonts/*"
+      ],
       "@utils": [
         "utils"
       ],

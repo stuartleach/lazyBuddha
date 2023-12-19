@@ -15,17 +15,12 @@ export const SoundTitle = {
 };
 
 
-
-
 export const loadSound = async (soundName: string) => {
-    console.log("loadSound soundname====",soundName);
     const sound = new Audio.Sound();
     try {
         await sound.loadAsync(SoundTitle[soundName]);
-        console.log("loadSound success",soundName)
         return sound;
     } catch (error) {
-        console.log("loadSound error",error);
         return null;
     }
 };
@@ -37,6 +32,8 @@ export const fadeIn = async (sound: Audio.Sound) => {
     const step = 0.1;
     await sound.setVolumeAsync(volume);
     await sound.playAsync();
+    await Audio.setAudioModeAsync({playsInSilentModeIOS: true});
+    // await sound.setIsLoopingAsync(true)
     const interval = setInterval(async () => {
         volume += step;
         if (volume >= maxVolume) {

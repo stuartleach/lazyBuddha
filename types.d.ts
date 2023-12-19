@@ -29,12 +29,13 @@ interface CountdownProps {
     timeLeftInMilliseconds: number;
     totalMilliseconds: number;
     circleDiameter: number;
-    inProgress: boolean;
+    playing: boolean;
 }
 
 interface MeditationTimerProps {
+    started: boolean;
     duration: number;
-    inProgress: boolean;
+    playing: boolean;
     circleDiameter: number;
     timeLeftInMilliseconds: number;
     setTimeLeftInMilliseconds: React.Dispatch<React.SetStateAction<number>>;

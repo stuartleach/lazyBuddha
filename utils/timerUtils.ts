@@ -1,16 +1,35 @@
 export const timer = (duration: number, setTimeLeftInMilliseconds: (value: number) => void) => {
-    let elapsedMilliseconds = 0; // Move inside the function
-    const updateInterval = 50;   // This can also be moved inside if it's not used elsewhere
+    let elapsedMilliseconds = 0;
+    const updateInterval = 50;
+    let countdown: NodeJS.Timeout;
+    let isRunning = false;
 
-    const countdown = setInterval(() => {
-        elapsedMilliseconds += updateInterval;
-        if (elapsedMilliseconds >= duration * 60000) {
+    const start = () => {
+        isRunning = true;
+        countdown = setInterval(() => {
+            elapsedMilliseconds += updateInterval;
+            if (elapsedMilliseconds >= duration * 60000) {
+                clearInterval(countdown);
+                setTimeLeftInMilliseconds(0);
+                isRunning = false;
+            } else {
+                setTimeLeftInMilliseconds(duration * 60000 - elapsedMilliseconds);
+            }
+        }, updateInterval);
+    };
+
+    const pause = () => {
+        if (isRunning) {
             clearInterval(countdown);
-            setTimeLeftInMilliseconds(0);
-        } else {
-            setTimeLeftInMilliseconds(duration * 60000 - elapsedMilliseconds);
+            isRunning = false;
         }
-    }, updateInterval);
+    };
 
-    return countdown;
+    const resume = () => {
+        if (!isRunning) {
+            start();
+        }
+    };
+
+    return { start, pause, resume };
 };

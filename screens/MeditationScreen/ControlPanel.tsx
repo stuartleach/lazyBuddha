@@ -1,35 +1,33 @@
 import {StyleSheet, Text, View} from "react-native";
-import {BigStartButtonProps, ControlsProps} from "../../types";
+import {BigStartButtonProps, ControlsProps} from "@types";
 import React, {useState} from "react";
 import RNPickerSelect from "react-native-picker-select";
-import {SoundTitle} from "../../utils";
-import {fontTheme, theme} from "../../styles/theme";
-
-const buttonRadius = 10;
+import {SoundTitle} from "@utils";
+import {fontTheme, theme} from "@styles";
+import {hexToRGB} from "@utils/themeUtils";
 
 
 function DurationPicker({onChange}) {
     const [selectedValue, setSelectedValue] = useState("2");
-
     const handleValueChange = (value: React.SetStateAction<string>) => {
         setSelectedValue(value);
         onChange(value);
     };
-
     return (
-        <RNPickerSelect
-            onValueChange={handleValueChange}
-            value={selectedValue}
-            items={[
-                {label: '30 seconds', value: '30'},
-                {label: '1 minute', value: '1'},
-                {label: '2 minutes', value: '2'},
-                {label: '3 minutes', value: '3'},
-                {label: '5 minutes', value: '5'},
-                {label: '10 minutes', value: '10'},
-            ]}
-            style={pickerSelectStyles}
-        />
+        <View style={{justifyContent: "center"}}>
+            <RNPickerSelect
+                onValueChange={handleValueChange}
+                value={selectedValue}
+                items={[
+                    {label: '30 seconds', value: '30'},
+                    {label: '1 minute', value: '1'},
+                    {label: '2 minutes', value: '2'},
+                    {label: '3 minutes', value: '3'},
+                    {label: '5 minutes', value: '5'},
+                    {label: '10 minutes', value: '10'},
+                ]}
+                style={pickerSelectStyles}
+            /></View>
     );
 }
 
@@ -42,36 +40,45 @@ const SoundPicker = ({onChange}) => {
     };
     const soundItems = soundNames.map(sound => ({label: sound, value: sound}));
     return (
-        <RNPickerSelect
-            onValueChange={handleValueChange}
-            value={selectedValue}
-            items={soundItems}
-            style={pickerSelectStyles}
-        />
+        <View style={{
+            justifyContent: "center",
+        }}>
+            <RNPickerSelect
+                onValueChange={handleValueChange}
+                value={selectedValue}
+                items={soundItems}
+                style={{...pickerSelectStyles}}
+                useNativeAndroidPickerStyle={false}
+            /></View>
     );
 }
+
+const buttonRadius = 10;
+
+
 const pickerSelectStyles = StyleSheet.create({
     inputIOS: {
         fontSize: 16,
         paddingVertical: 12,
-        paddingHorizontal: 10,
-        backgroundColor: theme.backgroundTheme,
-        borderColor: 'purple',
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         borderRadius: buttonRadius,
-        color: theme.textTheme,
-        paddingRight: 30,
+        color: "white",
         fontWeight: 'bold',
-        fontFamily: fontTheme.bold,
+        fontFamily: fontTheme.black,
     },
+
     inputAndroid: {
         fontSize: 16,
         paddingVertical: 12,
-        paddingHorizontal: 10,
-        backgroundColor: theme.backgroundTheme,
-        borderColor: 'purple',
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         borderRadius: buttonRadius,
-        color: theme.textTheme,
-        paddingRight: 30,
+        color: "white",
+        fontWeight: 'bold',
+        fontFamily: fontTheme.black,
     },
 });
 
@@ -90,11 +97,17 @@ export function BigStartButton({inProgress, toggleProgress, style}: BigStartButt
 
 const bigStartStyles = StyleSheet.create({
     button: {
-        padding: 20,
-        margin: 10,
-        borderRadius: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderRadius: 10,
         fontWeight: 'bold',
-        textAlign: 'center',
+        margin: 10,
+        backgroundColor: theme.buttonBackground,
+        width: "100%",
+        borderColor: hexToRGB(theme.textTheme, 0.1),
+        borderStyle: "solid",
     },
     text: {
         textAlign: 'center',
@@ -105,14 +118,35 @@ const bigStartStyles = StyleSheet.create({
     }
 });
 
-export const ResetButton = (props) => {
+export const ResetButton = (props: { reset: () => void; }) => {
     const {reset} = props;
     return (
-        <View>
-            <Text style={[controlsStyles.controlsHeaderText, {fontSize: 18 }]} onPress={reset}>Reset</Text>
+        <View style={[bigStartStyles.button, resetButtonStyles.button]}>
+            <Text style={[controlsStyles.controlsHeaderText, bigStartStyles.text, resetButtonStyles.text]}
+                  onPress={reset}>Reset</Text>
         </View>
     );
 }
+
+const resetButtonStyles = StyleSheet.create({
+    button: {
+        width: "100%"
+    },
+    text: {
+        fontSize: 18,
+    }
+});
+
+export const PauseButton = (props: { pause: () => void; }) => {
+    const {pause} = props;
+    return (
+        <View style={[bigStartStyles.button, resetButtonStyles.button]}>
+            <Text style={[controlsStyles.controlsHeaderText, bigStartStyles.text, resetButtonStyles.text]}
+                  onPress={pause}>Pause</Text>
+        </View>)
+        ;
+}
+
 
 export const ControlPanel = (props: ControlsProps) => {
     const {inProgress, toggleProgress, onChangeDuration, onChangeSound, reset} = props;
@@ -134,7 +168,6 @@ const controlsStyles = StyleSheet.create({
         fontSize: 14,
         fontFamily: fontTheme.light,
         marginVertical: 10,
-        color: theme.textTheme,
     },
     buttonContainer: {
         flexDirection: 'row',
@@ -144,13 +177,14 @@ const controlsStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
     },
-
     picker: {
         width: '40%',
-        padding: 5,
+        padding: 10,
         margin: 10,
-        backgroundColor: theme.textTheme,
+        // backgroundColor: hexToRGB(theme.textTheme, 0.1),
+        backgroundColor: theme.buttonBackground,
         opacity: 0.8,
-        borderRadius: buttonRadius + 5,
+        borderRadius: buttonRadius + 3,
+        alignItems: 'center',
     },
 })
