@@ -5,11 +5,8 @@ export const theme = {
     backgroundTheme: "#8D97CB",
     textTheme: "#ffffff",
     fontFamily: "Lato",
-    // buttonBackground: hexToRGB("#fffffff", 0.1),
     buttonBackground: hexToRGB("#C9D3FF", 0.3),
     accentTheme: hexToRGB("#C9D3FF", 0.1),
-
-
 }
 
 export const fontTheme = {
@@ -43,19 +40,15 @@ export const mainStyles = StyleSheet.create({
     }
 })
 
-
-
 export const topThirdStyles = StyleSheet.create({
     topThird: {
-        height: "25%", // Change this to 60% to make topThird take up 60% of the screen
+        // height: "25%", // Change this to 60% to make topThird take up 60% of the screen
         width: "100%",
         top: "0%",
         backgroundColor: theme.accentTheme,
         borderRadius: 10,
         flex: 1,
         flexDirection: "row",
-        justifyContent: "space-evenly",
-        // position: "relative"
         position: "absolute",
     },
     leftHalf: {
@@ -68,10 +61,10 @@ export const topThirdStyles = StyleSheet.create({
     rightHalf: {
         margin: 10,
         justifyContent: "space-between",
+        flexDirection: "column",
         flex: 3,
         alignItems: "center",
-        marginRight: 10,
-        marginVertical: 10,
+        height: "100%",
     },
     startButton: {
         paddingLeft: 20,
@@ -87,6 +80,7 @@ export const topThirdStyles = StyleSheet.create({
     },
     startButtonText: {
         textAlign: 'center',
+        justifyContent: "center",
         fontFamily: fontTheme.black,
         color: theme.textTheme,
         fontSize: 50,
@@ -94,10 +88,13 @@ export const topThirdStyles = StyleSheet.create({
     },
     smallButton: {
         width: "100%",
+        flex: 1,
         padding: 10,
         borderRadius: 10,
+        height: "100%",
+        justifyContent: "center",
+        alignItems: "center",
         backgroundColor: theme.buttonBackground,
-
     },
     smallButtonText: {
         paddingVertical: 15,
@@ -109,15 +106,9 @@ export const topThirdStyles = StyleSheet.create({
     }
 });
 
-
-
 export const middleThirdStyles = StyleSheet.create({
     middleThird: {
         flex: 1,
-        // height: "40%",
-        // width: "40%",
-        // padding: "10%",
-        // backgroundColor: theme.accentTheme,
         borderRadius: 1000,
         flexDirection: "row",
         position: "absolute",
@@ -154,14 +145,10 @@ export const middleThirdStyles = StyleSheet.create({
     }
 });
 
-
-
 export const bottomThirdStyles = StyleSheet.create({
     bottomThird: {
         backgroundColor: theme.accentTheme,
         borderRadius: 10,
-        // position: "absolute",
-        // height: "10%",
         flex: 1,
         flexDirection: "row",
         position: "absolute",
@@ -184,8 +171,6 @@ export const bottomThirdStyles = StyleSheet.create({
         borderRadius: 10,
         fontWeight: 'bold',
         backgroundColor: theme.buttonBackground,
-        // width: "100%",
-        // height: "100%",
         borderColor: hexToRGB(theme.textTheme, 0.1),
         borderStyle: "solid",
         justifyContent: "center",
@@ -213,4 +198,33 @@ export const bottomThirdStyles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 18,
     }
+});
+
+
+export const pickerSelectStyles = StyleSheet.create({
+    inputIOS: {
+        fontSize: 16,
+        paddingVertical: 12,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+        textAlign: 'center',
+        color: "white",
+        fontWeight: 'bold',
+        fontFamily: fontTheme.black,
+    },
+
+    inputAndroid: {
+        fontSize: 16,
+        paddingVertical: 12,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+        textAlign: 'center',
+        color: "white",
+        fontWeight: 'bold',
+        fontFamily: fontTheme.black,
+    },
 });

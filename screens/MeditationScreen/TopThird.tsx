@@ -38,6 +38,8 @@ const smallerButtonStyles = StyleSheet.create({
     text: {}
 });
 
+const FlexSpacer = () => <View style={{flex: 1, width: "100%", height: "100%"}}><br /></View>;
+
 export function TopThird(props: { topThirdProps: TopThirdProps; }) {
     const {inProgress, toggleProgress, pause, reset} = props.topThirdProps;
     return (
@@ -47,6 +49,7 @@ export function TopThird(props: { topThirdProps: TopThirdProps; }) {
             </View>
             <View style={topThirdStyles.rightHalf}>
                 <PauseButton pause={pause}/>
+                <FlexSpacer />
                 <ResetButton reset={reset}/>
             </View>
         </View>

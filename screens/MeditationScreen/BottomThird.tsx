@@ -3,10 +3,7 @@ import {BigStartButtonProps, BottomThirdProps, ControlsProps} from "@types";
 import React, {useState} from "react";
 import RNPickerSelect from "react-native-picker-select";
 import {SoundTitle} from "@utils";
-import {fontTheme, theme} from "@styles";
-import {hexToRGB} from "@utils/themeUtils";
-import {buttonRadius} from "../../App";
-import {bottomThirdStyles} from "@styles/theme";
+import {bottomThirdStyles, pickerSelectStyles} from "@styles/theme";
 
 
 function DurationPicker({onChange}) {
@@ -51,35 +48,6 @@ const SoundPicker = ({onChange}) => {
         />
     );
 }
-
-
-const pickerSelectStyles = StyleSheet.create({
-    inputIOS: {
-        fontSize: 16,
-        paddingVertical: 12,
-        alignContent: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 10,
-        textAlign: 'center',
-        color: "white",
-        fontWeight: 'bold',
-        fontFamily: fontTheme.black,
-    },
-
-    inputAndroid: {
-        fontSize: 16,
-        paddingVertical: 12,
-        alignContent: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 10,
-        textAlign: 'center',
-        color: "white",
-        fontWeight: 'bold',
-        fontFamily: fontTheme.black,
-    },
-});
 
 
 export const BottomThird = (props: {
