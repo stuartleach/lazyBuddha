@@ -8,6 +8,7 @@ import {Meditation} from "@screens/MeditationScreen/Meditation";
 import {styles, theme} from "@styles";
 
 SplashScreen.preventAutoHideAsync().then(r => console.log("SplashScreen.preventAutoHideAsync()", r));
+export const buttonRadius = 10;
 
 function App() {
 

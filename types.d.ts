@@ -41,4 +41,28 @@ interface MeditationTimerProps {
     setTimeLeftInMilliseconds: React.Dispatch<React.SetStateAction<number>>;
 }
 
+interface MiddleThirdProps {
+    height: any;
+    duration: any;
+    playing: any;
+    timeLeftInMilliseconds: any;
+    setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
+    started: any;
+}
+interface BottomThirdProps {
+    reset: () => void;
+    inProgress: boolean;
+    toggleProgress: () => void;
+    onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
+    soundName: (selectedSound: string) => void;
+    onChangeSound: (selectedSound: string) => void;
+    setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
+    setSoundName: (soundName: string) => void;
+}
 
+interface TopThirdProps {
+    inProgress: boolean;
+    toggleProgress: () => void;
+    pause: () => void;
+    reset: () => void;
+}
