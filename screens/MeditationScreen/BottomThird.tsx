@@ -49,6 +49,8 @@ export const BottomThird = (props: {
     const [durationSelectionMenuVisible, setDurationSelectionMenuVisible] = useState(false);
     const [soundSelectionMenuVisible, setSoundSelectionMenuVisible] = useState(false);
 
+
+    // TODO: Import these from somewhere else
         const timeItems = [
         {label: '30 seconds', value: '0.5'},
         {label: '1 minute', value: '1'},
@@ -58,6 +60,7 @@ export const BottomThird = (props: {
         {label: '10 minutes', value: '10'},
     ];
 
+    // TODO: Import these from somewhere else
     const soundItems = [
         {label: 'Ocean', value: 'Ocean'},
         {label: 'Rain', value: 'Rain'},
