@@ -4,7 +4,7 @@ import {loadSound} from '@utils';
 import * as SplashScreen from 'expo-splash-screen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as Font from 'expo-font';
-import {Meditation} from "@screens/MeditationScreen/Meditation";
+import {MeditationScreen} from "@screens/MeditationScreen/MeditationScreen";
 import {styles, theme} from "@styles";
 
 SplashScreen.preventAutoHideAsync().then(r => console.log("SplashScreen.preventAutoHideAsync()", r));
@@ -63,7 +63,7 @@ function App() {
             alignItems: 'center',
             width: "100%",
         }}>
-            <Meditation/>
+            <MeditationScreen/>
         </View>
     );
 }

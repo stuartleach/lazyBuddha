@@ -9,7 +9,7 @@ import {fadeIn, fadeOut, loadSound} from "@utils";
 import {mainStyles} from "@styles";
 
 
-export function Meditation() {
+export function MeditationScreen() {
     const [originalDuration, setOriginalDuration] = useState(2); // New state for original duration
     const [duration, setDuration] = useState(originalDuration);
     const [started, setStarted] = useState(false); // New state for original duration

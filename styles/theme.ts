@@ -6,7 +6,6 @@ export const theme = {
     textTheme: "#ffffff",
     fontFamily: "Lato",
     buttonBackground: "#A4AEDE",
-    // accentTheme: "#939ED0",
     accentTheme: "#8F9ACD",
 }
 
