@@ -1,14 +1,14 @@
 import React, {useEffect, useRef, useState} from "react";
 import {CountdownProps, MeditationTimerProps, MiddleThirdProps} from "@types";
 import {hexToRGB, timer} from "@utils";
-import {StyleSheet, Text, View} from "react-native";
+import {Text, View} from "react-native";
 import {Circle, Svg} from "react-native-svg";
-import {fontTheme, theme} from "@styles";
+import {theme} from "@styles";
 import {middleThirdStyles} from "@styles/theme";
 
 const MeditationTimer: React.FC<MeditationTimerProps> = (props) => {
     const intervalRef = useRef<{ start: () => void, pause: () => void, resume: () => void } | null>(null);
-    const {duration, playing, circleDiameter, setTimeLeftInMilliseconds, timeLeftInMilliseconds, started} = props;
+    const {duration, playing, circleDiameter, setTimeLeftInMilliseconds, timeLeftInMilliseconds, started, testID: string} = props;
 
     useEffect(() => {
         setTimeLeftInMilliseconds(duration * 60000);
@@ -99,7 +99,8 @@ export const MiddleThird = (props: { middleThirdProps: MiddleThirdProps }) => {
     } = props.middleThirdProps;
     return <View style={[middleThirdStyles.middleThird, {height: height}]}>
         <View style={middleThirdStyles.smallContainer}>
-            <MeditationTimer duration={duration} playing={playing} circleDiameter={height}
+            <MeditationTimer duration={duration} playing={playing} circleDiameter={height} testID="meditation-timer"
+
                              setTimeLeftInMilliseconds={setTimeLeftInMilliseconds}
                              timeLeftInMilliseconds={timeLeftInMilliseconds} started={started}/>
         </View>

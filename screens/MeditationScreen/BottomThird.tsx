@@ -5,15 +5,11 @@ import {addUnitsToDuration} from "@utils";
 import {bottomThirdStyles, topThirdStyles} from "@styles/theme";
 
 const SelectionMenu = ({onChange, setVisible, items}) => {
-    // Define the number of items per column
     const itemsPerColumn = 3;
-
-    // Split items into sub-arrays of size itemsPerColumn
     const columns = [];
     for (let i = 0; i < items.length; i += itemsPerColumn) {
         columns.push(items.slice(i, i + itemsPerColumn));
     }
-
     const [selectedValue, setSelectedValue] = useState("2");
     const handleValueChange = (value: React.SetStateAction<string>) => {
         console.log("value", value);
@@ -22,8 +18,6 @@ const SelectionMenu = ({onChange, setVisible, items}) => {
     };
 
     const handlePress = (value: React.SetStateAction<string>) => {
-     // close the menu
-        // set the value
         onChange(value);
         setVisible(false);
     }
@@ -47,19 +41,6 @@ const SelectionMenu = ({onChange, setVisible, items}) => {
     )
 }
 
-/*<RNPickerSelect
-            onValueChange={handleValueChange}
-            value={selectedValue}
-            items={[
-                {label: '30 seconds', value: '30'},
-                {label: '1 minute', value: '1'},
-                {label: '2 minutes', value: '2'},
-                {label: '3 minutes', value: '3'},
-                {label: '5 minutes', value: '5'},
-                {label: '10 minutes', value: '10'},
-            ]}
-            style={pickerSelectStyles}
-        />*/
 export const BottomThird = (props: {
     bottomThirdProps: BottomThirdProps
 }) => {

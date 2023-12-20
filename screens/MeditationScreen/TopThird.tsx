@@ -1,5 +1,5 @@
 import {BigStartButtonProps, TopThirdProps} from "@types";
-import {StyleSheet, Text, View} from "react-native";
+import {Text, View} from "react-native";
 import React from "react";
 import {topThirdStyles} from "@styles";
 
@@ -32,12 +32,6 @@ export const PauseButton = (props: { endSession: () => void; }) => {
             <Text style={topThirdStyles.smallButtonText} onPress={endSession}>End</Text>
         </View>)
 }
-const smallerButtonStyles = StyleSheet.create({
-    button: {},
-    text: {}
-});
-
-const FlexSpacer = () => <View><Text style={{lineHeight: 1}}>{"\n"}</Text></View>;
 
 export function TopThird(props: { topThirdProps: TopThirdProps; }) {
     const {inProgress, toggleProgress, pause, reset} = props.topThirdProps;

@@ -39,6 +39,7 @@ interface MeditationTimerProps {
     circleDiameter: number;
     timeLeftInMilliseconds: number;
     setTimeLeftInMilliseconds: React.Dispatch<React.SetStateAction<number>>;
+    testID: string;
 }
 
 interface MiddleThirdProps {
