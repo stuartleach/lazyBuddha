@@ -1,3 +1,4 @@
-import {theme, fontTheme, styles} from "@styles/theme";
 
-export {theme, fontTheme, styles};
+import {mainStyles, theme, fontTheme, bottomThirdStyles, middleThirdStyles, topThirdStyles, pickerSelectStyles} from "@styles/theme";
+
+export {mainStyles, theme, fontTheme, bottomThirdStyles, middleThirdStyles, topThirdStyles, pickerSelectStyles}

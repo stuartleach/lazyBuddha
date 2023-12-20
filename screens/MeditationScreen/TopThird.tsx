@@ -2,7 +2,7 @@ import {BigStartButtonProps, TopThirdProps} from "@types";
 import {StyleSheet, Text, View} from "react-native";
 import {hexToRGB} from "@utils";
 import React from "react";
-import {topThirdStyles} from "@styles/theme";
+import {topThirdStyles} from "@styles";
 
 export function BigStartButton({inProgress, toggleProgress, style}: BigStartButtonProps) {
     return (
@@ -10,7 +10,7 @@ export function BigStartButton({inProgress, toggleProgress, style}: BigStartButt
             <Text
                 style={topThirdStyles.startButtonText}
                 onPress={toggleProgress}
-            >{inProgress ? "Stop" : "Start"}
+            >{inProgress ? "Pause" : "Start"}
             </Text>
         </View>
     );
@@ -26,11 +26,11 @@ export const ResetButton = (props: { reset: () => void; }) => {
     );
 }
 
-export const PauseButton = (props: { pause: () => void; }) => {
-    const {pause} = props;
+export const PauseButton = (props: { endSession: () => void; }) => {
+    const {endSession} = props;
     return (
         <View style={topThirdStyles.smallButton}>
-            <Text style={topThirdStyles.smallButtonText} onPress={pause}>Pause</Text>
+            <Text style={topThirdStyles.smallButtonText} onPress={endSession}>End</Text>
         </View>)
 }
 const smallerButtonStyles = StyleSheet.create({
@@ -38,19 +38,27 @@ const smallerButtonStyles = StyleSheet.create({
     text: {}
 });
 
-const FlexSpacer = () => <View style={{flex: 1, width: "100%", height: "100%"}}><br /></View>;
+const FlexSpacer = () => <View><Text style={{lineHeight: 1}}>{"\n"}</Text></View>;
 
 export function TopThird(props: { topThirdProps: TopThirdProps; }) {
     const {inProgress, toggleProgress, pause, reset} = props.topThirdProps;
+    const endSession = () => {
+        pause();
+        reset();
+    }
+
     return (
         <View style={topThirdStyles.topThird}>
-            <View style={topThirdStyles.leftHalf}>
-                <BigStartButton inProgress={inProgress} toggleProgress={toggleProgress}/>
-            </View>
-            <View style={topThirdStyles.rightHalf}>
-                <PauseButton pause={pause}/>
-                <FlexSpacer />
-                <ResetButton reset={reset}/>
+            <View style={topThirdStyles.smallContainer}>
+                <View style={topThirdStyles.leftHalf}>
+                    <BigStartButton inProgress={inProgress} toggleProgress={toggleProgress}/>
+                </View>
+                <View style={topThirdStyles.rightHalf}>
+                    <PauseButton endSession={endSession}/>
+                    {/*<FlexSpacer />*/}
+                    <View style={{flex: 1}}><Text> </Text></View>
+                    <ResetButton reset={reset}/>
+                </View>
             </View>
         </View>
     );

@@ -98,8 +98,10 @@ export const MiddleThird = (props: { middleThirdProps: MiddleThirdProps }) => {
         started
     } = props.middleThirdProps;
     return <View style={[middleThirdStyles.middleThird, {height: height}]}>
-        <MeditationTimer duration={duration} playing={playing} circleDiameter={height}
-                         setTimeLeftInMilliseconds={setTimeLeftInMilliseconds}
-                         timeLeftInMilliseconds={timeLeftInMilliseconds} started={started}/>
-    </View>;
+        <View style={middleThirdStyles.smallContainer}>
+            <MeditationTimer duration={duration} playing={playing} circleDiameter={height}
+                             setTimeLeftInMilliseconds={setTimeLeftInMilliseconds}
+                             timeLeftInMilliseconds={timeLeftInMilliseconds} started={started}/>
+        </View>
+    </View>
 }

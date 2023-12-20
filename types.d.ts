@@ -49,15 +49,18 @@ interface MiddleThirdProps {
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
     started: any;
 }
+
 interface BottomThirdProps {
     reset: () => void;
     inProgress: boolean;
     toggleProgress: () => void;
+    duration: number;
     onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
-    soundName: (selectedSound: string) => void;
+    setDuration: (value) => void;
+    soundName: string;
+    setSoundName: (soundName: string) => void;
     onChangeSound: (selectedSound: string) => void;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
-    setSoundName: (soundName: string) => void;
 }
 
 interface TopThirdProps {

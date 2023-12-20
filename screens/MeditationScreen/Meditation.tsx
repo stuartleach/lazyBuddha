@@ -96,11 +96,13 @@ export function Meditation() {
         reset: reset,
         inProgress: playing,
         toggleProgress: () => setPlaying(!playing),
+        setDuration: setDuration,
+        duration: duration,
         onChangeDuration: handleDurationChange,
-        soundName: setSoundName,
+        setSoundName: setSoundName,
+        soundName: soundName,
         onChangeSound: handleSoundChange,
         setTimeLeftInMilliseconds: setTimeLeftInMilliseconds,
-        setSoundName: setSoundName,
     }
 
 

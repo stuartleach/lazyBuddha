@@ -5,8 +5,8 @@ export const theme = {
     backgroundTheme: "#8D97CB",
     textTheme: "#ffffff",
     fontFamily: "Lato",
-    buttonBackground: hexToRGB("#C9D3FF", 0.3),
-    accentTheme: hexToRGB("#C9D3FF", 0.1),
+    buttonBackground: "#A4AEDE",
+    accentTheme: "#939ED0",
 }
 
 export const fontTheme = {
@@ -33,23 +33,40 @@ export const mainStyles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: "column",
         position: "absolute",
-        width: "90%",
+        height: "85%",
+        width: "100%",
         justifyContent: "space-between",
         borderRadius: 10,
-        height: "80%",
     }
 })
 
 export const topThirdStyles = StyleSheet.create({
     topThird: {
-        // height: "25%", // Change this to 60% to make topThird take up 60% of the screen
+        // maxHeight: "25%", // Change this to 60% to make topThird take up 60% of the screen
         width: "100%",
-        top: "0%",
-        backgroundColor: theme.accentTheme,
+        // top: "0%",
+        // backgroundColor: theme.accentTheme,
         borderRadius: 10,
+        // height: "100%",
         flex: 1,
         flexDirection: "row",
-        position: "absolute",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        // height: "50%",
+
+        // position: "absolute",
+    },
+
+    smallContainer: {
+        backgroundColor: theme.accentTheme,
+        borderRadius: 10,
+        flexDirection: "row",
+        height: "70%",
+        // maxHeight: "40%",
+        justifyContent: "space-between",
+        flex: 1,
+        // alignItems: "center",
+        margin: 10,
     },
     leftHalf: {
         flexDirection: "row",
@@ -62,9 +79,9 @@ export const topThirdStyles = StyleSheet.create({
         margin: 10,
         justifyContent: "space-between",
         flexDirection: "column",
-        flex: 3,
+        flex: 2,
         alignItems: "center",
-        height: "100%",
+        // height: "100%",
     },
     startButton: {
         paddingLeft: 20,
@@ -88,16 +105,16 @@ export const topThirdStyles = StyleSheet.create({
     },
     smallButton: {
         width: "100%",
-        flex: 1,
+        flex: 3,
         padding: 10,
         borderRadius: 10,
-        height: "100%",
+        // height: "100%",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme.buttonBackground,
     },
     smallButtonText: {
-        paddingVertical: 15,
+        // paddingVertical: 15,
         textAlign: 'center',
         fontFamily: fontTheme.black,
         color: theme.textTheme,
@@ -110,15 +127,31 @@ export const middleThirdStyles = StyleSheet.create({
     middleThird: {
         flex: 1,
         borderRadius: 1000,
-        flexDirection: "row",
-        position: "absolute",
-        bottom: "27%",
+        // flexDirection: "row",
+        // position: "absolute",
+        // bottom: "30%",
+        // top: "50%",
+        width: "100%",
+        // height: "23%",
         justifyContent: "center",
         alignItems: "center",
+        zIndex: -1,
+    },
+    smallContainer: {
+        // backgroundColor: theme.accentTheme,
+        borderRadius: 10,
+        flexDirection: "row",
+        height: "30%",
+        // maxHeight: "40%",
+        justifyContent: "center",
+
+        flex: 1,
+        alignItems: "center",
+        // margin: 10,
     },
     countdown: {
-        justifyContent: "flex-start",
-        alignContent: "flex-start",
+        justifyContent: "center",
+        alignContent: "center",
         height: "100%"
     },
     timeDisplay: {
@@ -147,19 +180,63 @@ export const middleThirdStyles = StyleSheet.create({
 
 export const bottomThirdStyles = StyleSheet.create({
     bottomThird: {
-        backgroundColor: theme.accentTheme,
+        // backgroundColor: theme.accentTheme,
         borderRadius: 10,
+        width: "100%",
+        // maxHeight: "33%",
+        // height: "33%",
+        // maxHeight: "%", // Change this to 40% to make bottomThird take up 40% of the screen
+        // height: "50%",
         flex: 1,
         flexDirection: "row",
-        position: "absolute",
-        bottom: 0,
+        // position: "absolute",
         justifyContent: "flex-end",
+        alignItems: "center",
+
+    },
+    selectionMenuRows: {
+        flex: 1,
+        flexDirection: "row",
+        backgroundColor: "#939ED0",
+        borderRadius: 10,
+        // padding: 10,
+        height: "100%",
+        zIndex: 10,
+        justifyContent: "space-between",
+        marginVertical: 10,
+    },
+    selectionMenuColumns: {
+        flexDirection: 'column',
+        marginHorizontal: 10,
+        flex: 1,
+        height: "100%",
+        width: "80%",
+        justifyContent: "space-between"
+    },
+    smallContainer: {
+        backgroundColor: theme.accentTheme,
+        borderRadius: 10,
+        flexDirection: "row",
+        // maxHeight: "40%",
+        justifyContent: "space-around",
+        flex: 1,
+        // alignItems: "center",
+        margin: 10,
+        height: "50%",
     },
     leftHalf: {
+        flexDirection: "column",
+        // maxHeight: "20%",
+        // alignItems: "center",
+        justifyContent: "center",
         flex: 1,
         margin: 10,
     },
     rightHalf: {
+        flexDirection: "column",
+        // alignItems: "center",
+        justifyContent: "center",
+        // maxHeight: "20%",
         flex: 1,
         margin: 10,
     },
@@ -175,23 +252,18 @@ export const bottomThirdStyles = StyleSheet.create({
         borderStyle: "solid",
         justifyContent: "center",
     },
-    startButtonText: {
-        textAlign: 'center',
-        fontFamily: fontTheme.black,
-        color: theme.textTheme,
-        fontSize: 50,
-        fontWeight: 'bold',
-    },
     smallButton: {
-        // width: "100%",
-        padding: 10,
+        width: "100%",
+        height: "100%",
+        flex: 1,
+        justifyContent: "center",
+        // padding: 10,
         borderRadius: 10,
         backgroundColor: theme.buttonBackground,
         borderColor: hexToRGB(theme.textTheme, 0.1),
-
     },
     smallButtonText: {
-        paddingVertical: 15,
+        // paddingVertical: 15,
         textAlign: 'center',
         fontFamily: fontTheme.black,
         color: theme.textTheme,

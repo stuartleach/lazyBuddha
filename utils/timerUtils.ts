@@ -33,3 +33,13 @@ export const timer = (duration: number, setTimeLeftInMilliseconds: (value: numbe
 
     return { start, pause, resume };
 };
+
+export const addUnitsToDuration = (duration: number) => {
+    if (duration === 1) {
+        return `${duration} minute`;
+    }
+    if (duration < 1) {
+        return `${duration * 60} seconds`;
+    }
+    return `${duration} minutes`;
+}
