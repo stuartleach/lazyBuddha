@@ -2,12 +2,6 @@ import React from "react";
 import {ViewStyle} from 'react-native';
 
 
-interface BigStartButtonProps {
-    inProgress: boolean;
-    toggleProgress: () => void;
-    style?: ViewStyle;
-}
-
 interface BuddhaButtonProps {
     title: string,
     action: () => void,
@@ -17,7 +11,7 @@ interface BuddhaButtonProps {
 }
 
 interface ControlsProps {
-    inProgress: boolean;
+    playing: boolean;
     toggleProgress: () => void;
     reset: () => void;
     onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
@@ -49,11 +43,12 @@ interface MiddleThirdProps {
     timeLeftInMilliseconds: any;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
     started: any;
+    testID: string
 }
 
 interface BottomThirdProps {
     reset: () => void;
-    inProgress: boolean;
+    playing: boolean;
     toggleProgress: () => void;
     duration: number;
     onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
@@ -62,12 +57,15 @@ interface BottomThirdProps {
     setSoundName: (soundName: string) => void;
     onChangeSound: (selectedSound: string) => void;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
+    testID: string
 }
 
 interface TopThirdProps {
-    inProgress: boolean;
-    toggleProgress: () => void;
+    playing: boolean;
+    startSession: () => void;
     pauseSession: () => void;
+    resumeSession: () => void;
     resetSession: () => void;
     endSession: () => void;
+    testID: string
 }

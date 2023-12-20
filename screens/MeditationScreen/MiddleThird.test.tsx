@@ -13,7 +13,8 @@ describe('MiddleThird', () => {
                 playing: false,
                 setTimeLeftInMilliseconds: jest.fn(),
                 timeLeftInMilliseconds: 60000,
-                started: false
+                started: false,
+                testID: 'middle-third'
             }
         };
 

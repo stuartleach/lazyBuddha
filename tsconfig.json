@@ -38,8 +38,14 @@
       "@assets/*": [
         "assets/*"
       ],
+      "@sounds/*": [
+        "assets/sounds/*"
+      ],
       "@assets": [
         "assets"
+      ],
+      "@sounds": [
+        "assets/sounds"
       ],
       "@constants/*": [
         "constants/*"

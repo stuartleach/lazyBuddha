@@ -7,7 +7,7 @@ import {BottomThirdProps} from "@types";
 const mockProps: BottomThirdProps = {
 
     reset: jest.fn(),
-    inProgress: false,
+    playing: false,
     toggleProgress: jest.fn(),
     onChangeDuration: jest.fn(),
     setSoundName: jest.fn(),
@@ -16,6 +16,7 @@ const mockProps: BottomThirdProps = {
     setDuration: jest.fn(),
     soundName: 'Ocean',
     setTimeLeftInMilliseconds: jest.fn(),
+    testID: "bottom-third"
 
 };
 

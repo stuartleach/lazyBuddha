@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/Meditation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/SettingsScreen/SettingsScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/hooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/00 - beep.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/00 - beep.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/01_ocean.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/01_ocean.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/02_sea_iceland.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/02_sea_iceland.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/03_flow_france.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/03_flow_france.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/04_wave_iceland.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/04_wave_iceland.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/declarations.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/declarations.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/audio/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/soundUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/soundUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +259,7 @@
       <workItem from="1702835352920" duration="36994000" />
       <workItem from="1702933826606" duration="253000" />
       <workItem from="1702934100288" duration="727000" />
-      <workItem from="1703022871287" duration="13200000" />
+      <workItem from="1703022871287" duration="16523000" />
     </task>
     <servers />
   </component>

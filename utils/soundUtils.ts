@@ -1,10 +1,10 @@
 import {Audio, AVPlaybackSource} from 'expo-av';
 
 
-import Ocean from '../assets/audio/01_ocean.mp3';
-import Sea from '../assets/audio/02_sea_iceland.mp3';
-import Flow from '../assets/audio/03_flow_france.mp3';
-import Wave from '../assets/audio/04_wave_iceland.mp3';
+import Ocean from '@sounds/01_ocean.mp3';
+import Sea from '@sounds/02_sea_iceland.mp3';
+import Flow from '@sounds/03_flow_france.mp3';
+import Wave from '@sounds/04_wave_iceland.mp3';
 
 
 export const SoundTitle = {

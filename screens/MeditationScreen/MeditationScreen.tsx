@@ -1,108 +1,144 @@
-import React, {useEffect, useState} from "react";
-import {BottomThirdProps, MiddleThirdProps, TopThirdProps} from "@types";
+import React, {useCallback, useEffect, useState} from "react";
 import {View} from "react-native";
+import {BottomThirdProps, MiddleThirdProps, TopThirdProps} from "@types";
 import {StatusBar} from "expo-status-bar";
 import {BottomThird} from "@screens/MeditationScreen/BottomThird";
 import {TopThird} from "@screens/MeditationScreen/TopThird";
 import {MiddleThird} from "@screens/MeditationScreen/MiddleThird";
-import {fadeIn, fadeOut, loadSound} from "@utils";
+import {fadeIn, fadeOut, loadSound, useSoundManager} from "@utils";
 import {mainStyles} from "@styles";
 
-
 export function MeditationScreen() {
-    const [originalDuration, setOriginalDuration] = useState(2); // New state for original duration
-    const [duration, setDuration] = useState(originalDuration);
-    const [started, setStarted] = useState(false); // New state for original duration
-    const [timeLeftInMilliseconds, setTimeLeftInMilliseconds] = useState<number>(duration * 60000);
-    const [playing, setPlaying] = useState(false);
-    const [soundName, setSoundName] = useState("Ocean"); // Default sound is 'Ocean'
-    const [sound, setSound] = useState(null);
-    const [circleDiameter, setCircleDiameter] = useState(250);
-    const [resetPressed, setResetPressed] = useState(false); // Add this line
+    const [session, setSession] = useState({
+        originalDuration: 2,
+        duration: 2,
+        started: false,
+        timeLeftInMilliseconds: 120000,
+        playing: false,
+        soundName: "Ocean",
+        circleDiameter: 250,
+        resetPressed: false
+    });
 
-    const resetSession = () => {
-        setPlaying(false); // Stop the timer
-        setDuration(originalDuration); // Reset duration to original duration
-        setTimeLeftInMilliseconds(originalDuration * 60000); // Reset the time left to the new duration
-        setResetPressed(true); // Add this line
-    };
+    const {sound, loadSound, unloadSound, fadeIn, fadeOut} = useSoundManager(session.soundName);
 
-    const pauseSession = () => {
-        setPlaying(false);
-    };
 
-    const startSession = () => {
-        setStarted(true);
-        setPlaying(true);
-    }
-
-    const endSession = () => {
-        pauseSession();
-        console.log("end session. show some stats")
-        setTimeout(() => {
-            resetSession();
-        })
-    }
-
-    const handleDurationChange = (newDuration: React.SetStateAction<number>) => {
-        setOriginalDuration(newDuration);
-        setDuration(newDuration);
-    };
+    const togglePlaying = useCallback(() => {
+        setSession(prev => ({
+            ...prev,
+            playing: !prev.playing,
+            resetPressed: !prev.playing ? false : prev.resetPressed
+        }));
+    }, []);
 
     useEffect(() => {
-        loadSound(soundName).then(setSound).catch(e => console.warn(e));
-        return sound ? () => sound.unloadAsync() : undefined;
-    }, [soundName]);
+        if (sound) {
+            session.playing ? fadeIn(sound) : fadeOut(sound);
+        }
+    }, [session.playing, sound, fadeIn, fadeOut]);
 
     useEffect(() => {
-        const handleSound = async () => {
-            if (playing) {
-                await fadeIn(sound);
-            } else {
-                await fadeOut(sound);
-            }
+        // Call loadSound and handle any potential promise rejections
+        loadSound().catch(e => console.warn("Error loading sound:", e));
+
+        // Return a cleanup function that does not return a promise
+        return () => {
+            unloadSound().catch(e => console.warn("Error unloading sound:", e));
         };
-        handleSound().catch(e => console.warn(e));
-    }, [playing, sound]);
+    }, [loadSound, unloadSound]);
 
-    function handleSoundChange(selectedSound: string) {
-        setSoundName(selectedSound);
-    }
+    const handleDurationChange = (newDuration: number) => {
+        setSession(prev => ({
+            ...prev,
+            originalDuration: newDuration,
+            duration: newDuration,
+            timeLeftInMilliseconds: newDuration * 60000
+        }));
+    };
+
+    const startSession = useCallback(() => {
+        setSession(prev => ({...prev, started: true, playing: true}));
+    }, []);
+
+    const pauseSession = useCallback(() => {
+        setSession(prev => ({...prev, playing: false}));
+    }, []);
+
+    const resumeSession = useCallback(() => {
+        setSession(prev => ({...prev, playing: true}));
+    }, []);
+
+    const resetSession = useCallback(() => {
+        setSession(prev => ({
+            ...prev,
+            playing: false,
+            duration: prev.originalDuration,
+            timeLeftInMilliseconds: prev.originalDuration * 60000,
+            resetPressed: true
+        }));
+    }, []);
+
+    const endSession = useCallback(() => {
+        pauseSession();
+        console.log("End session. Show some stats");
+        setTimeout(resetSession, 1000); // Delay for reset to simulate end session process
+    }, [pauseSession, resetSession]);
+
+    const toggleProgress = () => {
+        setSession(prevSession => ({
+            ...prevSession,
+            playing: !prevSession.playing,
+            resetPressed: prevSession.playing ? false : prevSession.resetPressed
+        }));
+    };
+
+    const setTimeLeftInMilliseconds = (newTime: any) => {
+        setSession(prevSession => ({
+            ...prevSession,
+            timeLeftInMilliseconds: newTime
+        }));
+    };
+
+    const setSoundName = (newSoundName: any) => {
+        setSession(prevSession => ({
+            ...prevSession,
+            soundName: newSoundName
+        }));
+    };
 
     const topThirdProps: TopThirdProps = {
-        inProgress: playing,
-        toggleProgress: () => {
-            setPlaying(!playing);
-            if (playing) {
-                setResetPressed(false); // Add this line
-            }
-        },
+        playing: session.playing,
+        startSession: startSession,
         pauseSession: pauseSession,
-        resetSession: resetSession,
+        resumeSession: resumeSession,
         endSession: endSession,
+        resetSession: resetSession,
+        testID: "top-third"
     };
 
     const middleThirdProps: MiddleThirdProps = {
-        height: circleDiameter,
-        duration: duration,
-        playing: playing,
-        timeLeftInMilliseconds: timeLeftInMilliseconds,
+        height: session.circleDiameter,
+        duration: session.duration,
+        playing: session.playing,
+        timeLeftInMilliseconds: session.timeLeftInMilliseconds,
         setTimeLeftInMilliseconds: setTimeLeftInMilliseconds,
-        started: started
+        started: session.started,
+        testID: "middle-third"
     };
 
     const bottomThirdProps: BottomThirdProps = {
         reset: resetSession,
-        inProgress: playing,
-        toggleProgress: () => setPlaying(!playing),
-        setDuration: setDuration,
-        duration: duration,
+        playing: session.playing,
+        toggleProgress: toggleProgress,
+        setDuration: (newDuration: any) => setSession(prev => ({...prev, duration: newDuration})),
+        duration: session.duration,
         onChangeDuration: handleDurationChange,
         setSoundName: setSoundName,
-        soundName: soundName,
-        onChangeSound: handleSoundChange,
+        soundName: session.soundName,
+        onChangeSound: (newSound: any) => setSoundName(newSound),
         setTimeLeftInMilliseconds: setTimeLeftInMilliseconds,
-    }
+        testID: "bottom-third"
+    };
 
 
     return (
