@@ -22,16 +22,13 @@ interface CountdownProps {
     timeLeftInMilliseconds: number;
     totalMilliseconds: number;
     circleDiameter: number;
-    playing: boolean;
 }
 
 interface MeditationTimerProps {
     started: boolean;
     duration: number;
-    playing: boolean;
     circleDiameter: number;
     timeLeftInMilliseconds: number;
-    setTimeLeftInMilliseconds: React.Dispatch<React.SetStateAction<number>>;
     testID: string;
 }
 
@@ -40,6 +37,7 @@ interface MiddleThirdProps {
     duration: any;
     playing: any;
     timeLeftInMilliseconds: any;
+    isRunning: boolean;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
     started: any;
     testID: string
@@ -61,6 +59,7 @@ interface BottomThirdProps {
 
 interface TopThirdProps {
     playing: boolean;
+    started: boolean;
     startSession: () => void;
     pauseSession: () => void;
     resumeSession: () => void;

@@ -1,12 +1,31 @@
 import {hexToRGB} from "@utils";
 import {StyleSheet} from "react-native";
+import LinearGradient from 'react-native-linear-gradient';
+
+import React from 'react';
+import {View, Text} from 'react-native';
+
+
+
+export const colorsRaw = {
+    // backgroundRaw: "#8D97CB",
+    // textRaw: "#ffffff",
+    // buttonBackgroundRaw: "#A4AEDE",
+    // accentRaw: "#B2BAE2",
+    backgroundRaw: "#46A9CA",
+    backgroundAltRaw: "#38BAF0",
+    // textRaw: "#001C45",
+    textRaw: "#1A142F",
+    buttonBackgroundRaw: "#81C7DD",
+    accentRaw: "#FEFADC",
+}
 
 export const theme = {
-    backgroundTheme: "#8D97CB",
-    textTheme: "#ffffff",
+    backgroundTheme: hexToRGB(colorsRaw.backgroundRaw, 1),
+    textTheme: colorsRaw.textRaw,
     fontFamily: "Lato",
-    buttonBackground: "#A4AEDE",
-    accentTheme: "#8F9ACD",
+    buttonBackground: hexToRGB(colorsRaw.buttonBackgroundRaw, 0.5),
+    accentTheme: hexToRGB(colorsRaw.accentRaw, 0.1),
 }
 
 export const fontTheme = {
@@ -19,6 +38,20 @@ export const fontTheme = {
     extraBold: theme.fontFamily + "-ExtraBold",
     black: theme.fontFamily + "-Black",
 }
+
+// export const buttonStyles = StyleSheet.create({
+//     gradient: {
+//         color: rgba(255, 255, 255, 0.1)
+//     }
+// })
+
+
+export const gradientColors = {
+    // colors: [colorsRaw.backgroundRaw, colorsRaw.accentRaw, colorsRaw.buttonBackgroundRaw]
+    // colors: ["red","blue", "green"]
+    colors: [/*colorsRaw.backgroundRaw,theme.accentTheme, */colorsRaw.backgroundRaw, colorsRaw.backgroundAltRaw, theme.accentTheme/*, colorsRaw.textRaw*/]
+}
+
 
 export const mainStyles = StyleSheet.create({
     main: {
@@ -170,7 +203,7 @@ export const bottomThirdStyles = StyleSheet.create({
     selectionMenuRows: {
         flex: 1,
         flexDirection: "row",
-        backgroundColor: "#939ED0",
+        backgroundColor: theme.buttonBackground,
         borderRadius: 10,
         height: "100%",
         zIndex: 10,

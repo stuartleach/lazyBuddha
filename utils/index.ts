@@ -7,5 +7,5 @@ import {fadeOut} from "./soundUtils";
 import {timer} from "./timerUtils";
 import {hexToRGB} from "./themeUtils";
 import {addUnitsToDuration} from "./timerUtils";
-import useSoundManager from "./hooks"
+import {useSoundManager} from "./hooks"
 export {SoundTitle, loadSound, fadeIn, fadeOut, timer, hexToRGB, addUnitsToDuration, useSoundManager};

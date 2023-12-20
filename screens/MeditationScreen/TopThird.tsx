@@ -2,17 +2,46 @@ import React, {useEffect, useRef} from "react";
 import {Text, View} from "react-native";
 import {TopThirdProps} from "@types";
 import {topThirdStyles} from "@styles";
+import {Simulate} from "react-dom/test-utils";
+import pause = Simulate.pause;
+import {LinearGradient} from "expo-linear-gradient";
 
-export function StartButton(props: { startSession: () => void; playing: boolean; testID: string }) {
-    const {startSession, playing} = props;
+export function StartButton(props: {
+    startSession: () => void;
+    pauseSession: () => void;
+    playing: boolean;
+    testID: string;
+    started: boolean;
+    resumeSession: () => void;
+}) {
+    const {startSession, playing, pauseSession, started, resumeSession} = props;
     return (
-        <View style={[topThirdStyles.startButton]}>
-            <Text
-                style={topThirdStyles.startButtonText}
-                onPress={startSession}
-            >
-                {playing ? "Pause" : "Start"}
-            </Text>
+        <View
+            style={[topThirdStyles.startButton]}>
+            {!playing ?
+                !started ?
+                    <Text
+                        style={topThirdStyles.startButtonText}
+                        onPress={startSession}
+                    >
+                        Start
+                    </Text>
+                    :
+                    <Text
+                        style={topThirdStyles.startButtonText}
+                        onPress={resumeSession}
+                    >
+                        Resume
+                    </Text>
+
+                :
+                <Text
+                    style={topThirdStyles.startButtonText}
+                    onPress={pauseSession}
+                >
+                    Pause
+                </Text>
+            }
         </View>
     );
 }
@@ -52,36 +81,20 @@ export const EndButton = (props: { endSession: () => void; testID: string }) => 
 }
 
 export function TopThird(props: { topThirdProps: TopThirdProps }) {
-    const {playing, pauseSession, resetSession, startSession, resumeSession} = props.topThirdProps;
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const {playing, pauseSession, resetSession, startSession, resumeSession, started, endSession} = props.topThirdProps;
 
-    const endSession = () => {
-        pauseSession();
-        console.log("End session. Show some stats");
-        timeoutRef.current = setTimeout(() => {
-            resetSession();
-        }, 1000); // Assuming a 1-second delay
-    };
-
-    // Clear timeout on unmount
-    useEffect(() => {
-        return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        };
-    }, []);
 
     return (
         <View style={topThirdStyles.topThird}>
             <View style={topThirdStyles.smallContainer}>
                 <View style={topThirdStyles.leftHalf}>
-                    <StartButton testID="big-start-button" playing={playing} startSession={startSession}/>
+                    <StartButton testID="big-start-button" playing={playing} pauseSession={pauseSession}
+                                 started={started} startSession={startSession} resumeSession={resumeSession}/>
                 </View>
                 <View style={topThirdStyles.rightHalf}>
-                    <PauseButton testID="pause-button" pauseSession={pauseSession}/>
+                    {/*<PauseButton testID="pause-button" pauseSession={pauseSession}/>*/}
                     <EndButton testID="end-button" endSession={endSession}/>
-                    <ResumeButton testID="resume-button" resumeSession={resumeSession}/>
+                    {/*<ResumeButton testID="resume-button" resumeSession={resumeSession}/>*/}
                     <View style={{flex: 1}}><Text> </Text></View>
                     <ResetButton testID="reset-button" resetSession={resetSession}/>
                 </View>

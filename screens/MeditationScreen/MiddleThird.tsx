@@ -5,34 +5,13 @@ import {Text, View} from "react-native";
 import {Circle, Svg} from "react-native-svg";
 import {theme} from "@styles";
 import {middleThirdStyles} from "@styles/theme";
+import {useTimerManager} from "@utils/hooks";
 
-const MeditationTimer: React.FC<MeditationTimerProps> = (props) => {
-    const intervalRef = useRef<{ start: () => void, pause: () => void, resume: () => void } | null>(null);
-    const {duration, playing, circleDiameter, setTimeLeftInMilliseconds, timeLeftInMilliseconds, started, testID: string} = props;
-
-    useEffect(() => {
-        setTimeLeftInMilliseconds(duration * 60000);
-    }, [duration]);
-
-    useEffect(() => {
-        const handleTimer = () => {
-            if (playing) {
-                if (intervalRef.current) {
-                    intervalRef.current.pause();
-                }
-                intervalRef.current = timer(duration, setTimeLeftInMilliseconds);
-                intervalRef.current.start();
-            } else {
-                if (intervalRef.current) {
-                    intervalRef.current.pause();
-                }
-            }
-        };
-        handleTimer();
-        return () => {
-            if (intervalRef.current) intervalRef.current.pause();
-        };
-    }, [playing, duration, started]);
+const MeditationTimer: React.FC<MeditationTimerProps> = ({
+                                                             timeLeftInMilliseconds,
+                                                             duration,
+                                                             circleDiameter,
+                                                         }) => {
 
     return (
         <View style={middleThirdStyles.countdown}>
@@ -40,13 +19,12 @@ const MeditationTimer: React.FC<MeditationTimerProps> = (props) => {
                 timeLeftInMilliseconds={timeLeftInMilliseconds}
                 totalMilliseconds={duration * 60000}
                 circleDiameter={circleDiameter}
-                playing={playing}
             />
         </View>
     );
-}
+};
 const Countdown: React.FC<CountdownProps> = (props) => {
-    const {timeLeftInMilliseconds, totalMilliseconds, circleDiameter, playing} = props;
+    const {timeLeftInMilliseconds, totalMilliseconds, circleDiameter} = props;
     const progress = totalMilliseconds ? timeLeftInMilliseconds / totalMilliseconds : 0;
     const radius = circleDiameter / 2 - 20;
     const [strokeWidth, setStrokeWidth] = useState(10);
@@ -88,21 +66,20 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     );
 }
 
-export const MiddleThird = (props: { middleThirdProps: MiddleThirdProps }) => {
-    const {
-        height,
-        duration,
-        playing,
-        setTimeLeftInMilliseconds,
-        timeLeftInMilliseconds,
-        started
-    } = props.middleThirdProps;
-    return <View style={[middleThirdStyles.middleThird, {height: height}]}>
-        <View style={middleThirdStyles.smallContainer}>
-            <MeditationTimer duration={duration} playing={playing} circleDiameter={height} testID="meditation-timer"
+export const MiddleThird: React.FC<{ middleThirdProps: MiddleThirdProps }> = ({middleThirdProps}) => {
+    const {height, duration, playing, started, timeLeftInMilliseconds} = middleThirdProps;
 
-                             setTimeLeftInMilliseconds={setTimeLeftInMilliseconds}
-                             timeLeftInMilliseconds={timeLeftInMilliseconds} started={started}/>
+    return (
+        <View style={[middleThirdStyles.middleThird, {height}]}>
+            <View style={middleThirdStyles.smallContainer}>
+                <MeditationTimer
+                    duration={duration}
+                    circleDiameter={height}
+                    started={started}
+                    timeLeftInMilliseconds={timeLeftInMilliseconds}
+                    testID="meditation-timer"
+                />
+            </View>
         </View>
-    </View>
-}
+    );
+};

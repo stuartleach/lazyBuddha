@@ -44,7 +44,7 @@ const SelectionMenu = ({onChange, setVisible, items}) => {
 export const BottomThird = (props: {
     bottomThirdProps: BottomThirdProps
 }) => {
-    const {reset, inProgress, toggleProgress, onChangeDuration, setSoundName, onChangeSound, duration, setDuration, soundName, setTimeLeftInMilliseconds} = props.bottomThirdProps;
+    const {reset, playing, toggleProgress, onChangeDuration, setSoundName, onChangeSound, duration, setDuration, soundName, setTimeLeftInMilliseconds} = props.bottomThirdProps;
 
     const [durationSelectionMenuVisible, setDurationSelectionMenuVisible] = useState(false);
     const [soundSelectionMenuVisible, setSoundSelectionMenuVisible] = useState(false);
