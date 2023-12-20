@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/hooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hooks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +238,7 @@
       <workItem from="1702933826606" duration="253000" />
       <workItem from="1702934100288" duration="727000" />
       <workItem from="1703022871287" duration="16904000" />
-      <workItem from="1703079425406" duration="9932000" />
+      <workItem from="1703079425406" duration="10180000" />
     </task>
     <servers />
   </component>
