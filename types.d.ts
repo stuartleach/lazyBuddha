@@ -1,7 +1,6 @@
 import React from "react";
 import {ViewStyle} from 'react-native';
 
-
 interface BuddhaButtonProps {
     title: string,
     action: () => void,

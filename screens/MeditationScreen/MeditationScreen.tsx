@@ -22,15 +22,6 @@ export function MeditationScreen() {
 
     const {sound, loadSound, unloadSound, fadeIn, fadeOut} = useSoundManager(session.soundName);
 
-
-    const togglePlaying = useCallback(() => {
-        setSession(prev => ({
-            ...prev,
-            playing: !prev.playing,
-            resetPressed: !prev.playing ? false : prev.resetPressed
-        }));
-    }, []);
-
     useEffect(() => {
         if (sound) {
             session.playing ? fadeIn(sound) : fadeOut(sound);
