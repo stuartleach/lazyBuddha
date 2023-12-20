@@ -1,59 +1,10 @@
-import {StyleSheet, Text, View} from "react-native";
-import {BigStartButtonProps, BottomThirdProps, ControlsProps} from "@types";
+import {Text, View} from "react-native";
+import {BottomThirdProps} from "@types";
 import React, {useState} from "react";
-import RNPickerSelect from "react-native-picker-select";
-import {loadSound, SoundTitle, addUnitsToDuration} from "@utils";
-import {bottomThirdStyles, pickerSelectStyles, topThirdStyles} from "@styles/theme";
-
-
-function DurationPicker({onChange}) {
-    const [selectedValue, setSelectedValue] = useState("2");
-    const handleValueChange = (value: React.SetStateAction<string>) => {
-        setSelectedValue(value);
-        onChange(value);
-    };
-    return (
-        <RNPickerSelect
-            onValueChange={handleValueChange}
-            value={selectedValue}
-            items={[
-                {label: '30 seconds', value: '30'},
-                {label: '1 minute', value: '1'},
-                {label: '2 minutes', value: '2'},
-                {label: '3 minutes', value: '3'},
-                {label: '5 minutes', value: '5'},
-                {label: '10 minutes', value: '10'},
-            ]}
-            style={pickerSelectStyles}
-        />
-    );
-}
-
-const SoundPicker = ({onChange}) => {
-    const soundNames = Object.keys(SoundTitle);
-    const [selectedValue, setSelectedValue] = useState("Ocean");
-    const handleValueChange = (value: string) => {
-        setSelectedValue(value);
-        onChange(value);
-    };
-    const soundItems = soundNames.map(sound => ({label: sound, value: sound}));
-    return (
-
-        <RNPickerSelect
-            onValueChange={handleValueChange}
-            value={selectedValue}
-            items={soundItems}
-            style={{...pickerSelectStyles}}
-            useNativeAndroidPickerStyle={false}
-        />
-    );
-}
-
+import {addUnitsToDuration} from "@utils";
+import {bottomThirdStyles, topThirdStyles} from "@styles/theme";
 
 const SelectionMenu = ({onChange, setVisible, items}) => {
-
-
-
     // Define the number of items per column
     const itemsPerColumn = 3;
 

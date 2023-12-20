@@ -1,22 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
-import {
-    BigStartButtonProps,
-    BottomThirdProps,
-    CountdownProps,
-    MeditationTimerProps,
-    MiddleThirdProps,
-    TopThirdProps
-} from "@types";
-import {Text, View} from "react-native";
-import {Circle, Svg} from "react-native-svg";
+import React, {useEffect, useState} from "react";
+import {BottomThirdProps, MiddleThirdProps, TopThirdProps} from "@types";
+import {View} from "react-native";
 import {StatusBar} from "expo-status-bar";
-import {BottomThird} from "./BottomThird";
-import {StyleSheet} from "react-native";
-import {fadeIn, fadeOut, hexToRGB, loadSound, timer} from "@utils";
-import {fontTheme, styles, theme} from "@styles";
+import {BottomThird} from "@screens/MeditationScreen/BottomThird";
 import {TopThird} from "@screens/MeditationScreen/TopThird";
-import {MiddleThird} from "@screens/MiddleThird";
-import {mainStyles} from "@styles/theme";
+import {MiddleThird} from "@screens/MeditationScreen/MiddleThird";
+import {fadeIn, fadeOut, loadSound} from "@utils";
+import {mainStyles} from "@styles";
 
 
 export function Meditation() {

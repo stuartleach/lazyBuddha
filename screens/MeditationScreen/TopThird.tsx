@@ -1,6 +1,5 @@
 import {BigStartButtonProps, TopThirdProps} from "@types";
 import {StyleSheet, Text, View} from "react-native";
-import {hexToRGB} from "@utils";
 import React from "react";
 import {topThirdStyles} from "@styles";
 
