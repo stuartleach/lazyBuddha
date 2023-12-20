@@ -2,6 +2,7 @@ import {BigStartButtonProps, TopThirdProps} from "@types";
 import {Text, View} from "react-native";
 import React from "react";
 import {topThirdStyles} from "@styles";
+import {setTimeout} from "@testing-library/react-native/build/helpers/timers";
 
 export function BigStartButton({inProgress, toggleProgress, style}: BigStartButtonProps) {
     return (
@@ -16,11 +17,11 @@ export function BigStartButton({inProgress, toggleProgress, style}: BigStartButt
 }
 
 
-export const ResetButton = (props: { reset: () => void; }) => {
-    const {reset} = props;
+export const ResetButton = (props: { resetSession: () => void; }) => {
+    const {resetSession} = props;
     return (
         <View style={topThirdStyles.smallButton}>
-            <Text style={topThirdStyles.smallButtonText} onPress={reset}>Reset</Text>
+            <Text style={topThirdStyles.smallButtonText} onPress={resetSession}>Reset</Text>
         </View>
     );
 }
@@ -34,11 +35,15 @@ export const PauseButton = (props: { endSession: () => void; }) => {
 }
 
 export function TopThird(props: { topThirdProps: TopThirdProps; }) {
-    const {inProgress, toggleProgress, pause, reset} = props.topThirdProps;
+    const {inProgress, toggleProgress, pauseSession, resetSession} = props.topThirdProps;
     const endSession = () => {
-        pause();
-        reset();
+        pauseSession();
+        console.log("end session. show some stats")
+        setTimeout(() => {
+            resetSession();
+        })
     }
+
 
     return (
         <View style={topThirdStyles.topThird}>
@@ -48,9 +53,8 @@ export function TopThird(props: { topThirdProps: TopThirdProps; }) {
                 </View>
                 <View style={topThirdStyles.rightHalf}>
                     <PauseButton endSession={endSession}/>
-                    {/*<FlexSpacer />*/}
                     <View style={{flex: 1}}><Text> </Text></View>
-                    <ResetButton reset={reset}/>
+                    <ResetButton resetSession={resetSession}/>
                 </View>
             </View>
         </View>

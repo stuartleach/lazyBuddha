@@ -6,7 +6,8 @@ export const theme = {
     textTheme: "#ffffff",
     fontFamily: "Lato",
     buttonBackground: "#A4AEDE",
-    accentTheme: "#939ED0",
+    // accentTheme: "#939ED0",
+    accentTheme: "#8F9ACD",
 }
 
 export const fontTheme = {
@@ -42,19 +43,12 @@ export const mainStyles = StyleSheet.create({
 
 export const topThirdStyles = StyleSheet.create({
     topThird: {
-        // maxHeight: "25%", // Change this to 60% to make topThird take up 60% of the screen
         width: "100%",
-        // top: "0%",
-        // backgroundColor: theme.accentTheme,
         borderRadius: 10,
-        // height: "100%",
         flex: 1,
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
-        // height: "50%",
-
-        // position: "absolute",
     },
 
     smallContainer: {
@@ -62,10 +56,8 @@ export const topThirdStyles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: "row",
         height: "70%",
-        // maxHeight: "40%",
         justifyContent: "space-between",
         flex: 1,
-        // alignItems: "center",
         margin: 10,
     },
     leftHalf: {
@@ -81,7 +73,6 @@ export const topThirdStyles = StyleSheet.create({
         flexDirection: "column",
         flex: 2,
         alignItems: "center",
-        // height: "100%",
     },
     startButton: {
         paddingLeft: 20,
@@ -108,13 +99,11 @@ export const topThirdStyles = StyleSheet.create({
         flex: 3,
         padding: 10,
         borderRadius: 10,
-        // height: "100%",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme.buttonBackground,
     },
     smallButtonText: {
-        // paddingVertical: 15,
         textAlign: 'center',
         fontFamily: fontTheme.black,
         color: theme.textTheme,
@@ -127,27 +116,18 @@ export const middleThirdStyles = StyleSheet.create({
     middleThird: {
         flex: 1,
         borderRadius: 1000,
-        // flexDirection: "row",
-        // position: "absolute",
-        // bottom: "30%",
-        // top: "50%",
         width: "100%",
-        // height: "23%",
         justifyContent: "center",
         alignItems: "center",
         zIndex: -1,
     },
     smallContainer: {
-        // backgroundColor: theme.accentTheme,
         borderRadius: 10,
         flexDirection: "row",
         height: "30%",
-        // maxHeight: "40%",
         justifyContent: "center",
-
         flex: 1,
         alignItems: "center",
-        // margin: 10,
     },
     countdown: {
         justifyContent: "center",
@@ -180,16 +160,10 @@ export const middleThirdStyles = StyleSheet.create({
 
 export const bottomThirdStyles = StyleSheet.create({
     bottomThird: {
-        // backgroundColor: theme.accentTheme,
         borderRadius: 10,
         width: "100%",
-        // maxHeight: "33%",
-        // height: "33%",
-        // maxHeight: "%", // Change this to 40% to make bottomThird take up 40% of the screen
-        // height: "50%",
         flex: 1,
         flexDirection: "row",
-        // position: "absolute",
         justifyContent: "flex-end",
         alignItems: "center",
 
@@ -199,7 +173,6 @@ export const bottomThirdStyles = StyleSheet.create({
         flexDirection: "row",
         backgroundColor: "#939ED0",
         borderRadius: 10,
-        // padding: 10,
         height: "100%",
         zIndex: 10,
         justifyContent: "space-between",
@@ -217,26 +190,20 @@ export const bottomThirdStyles = StyleSheet.create({
         backgroundColor: theme.accentTheme,
         borderRadius: 10,
         flexDirection: "row",
-        // maxHeight: "40%",
         justifyContent: "space-around",
         flex: 1,
-        // alignItems: "center",
         margin: 10,
         height: "50%",
     },
     leftHalf: {
         flexDirection: "column",
-        // maxHeight: "20%",
-        // alignItems: "center",
         justifyContent: "center",
         flex: 1,
         margin: 10,
     },
     rightHalf: {
         flexDirection: "column",
-        // alignItems: "center",
         justifyContent: "center",
-        // maxHeight: "20%",
         flex: 1,
         margin: 10,
     },
@@ -257,13 +224,11 @@ export const bottomThirdStyles = StyleSheet.create({
         height: "100%",
         flex: 1,
         justifyContent: "center",
-        // padding: 10,
         borderRadius: 10,
         backgroundColor: theme.buttonBackground,
         borderColor: hexToRGB(theme.textTheme, 0.1),
     },
     smallButtonText: {
-        // paddingVertical: 15,
         textAlign: 'center',
         fontFamily: fontTheme.black,
         color: theme.textTheme,

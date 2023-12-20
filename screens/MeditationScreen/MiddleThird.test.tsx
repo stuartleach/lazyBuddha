@@ -1,4 +1,6 @@
 import { render } from '@testing-library/react-native';
+// import babel test utils
+import '@testing-library/jest-native/extend-expect';
 import React from 'react';
 import { MiddleThird } from '@screens/MeditationScreen/MiddleThird';
 

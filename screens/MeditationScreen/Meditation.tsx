@@ -20,20 +20,28 @@ export function Meditation() {
     const [circleDiameter, setCircleDiameter] = useState(250);
     const [resetPressed, setResetPressed] = useState(false); // Add this line
 
-    const reset = () => {
+    const resetSession = () => {
         setPlaying(false); // Stop the timer
         setDuration(originalDuration); // Reset duration to original duration
         setTimeLeftInMilliseconds(originalDuration * 60000); // Reset the time left to the new duration
         setResetPressed(true); // Add this line
     };
 
-    const pause = () => {
+    const pauseSession = () => {
         setPlaying(false);
     };
 
-    const start = () => {
+    const startSession = () => {
         setStarted(true);
         setPlaying(true);
+    }
+
+    const endSession = () => {
+        pauseSession();
+        console.log("end session. show some stats")
+        setTimeout(() => {
+            resetSession();
+        })
     }
 
     const handleDurationChange = (newDuration: React.SetStateAction<number>) => {
@@ -69,8 +77,9 @@ export function Meditation() {
                 setResetPressed(false); // Add this line
             }
         },
-        pause: pause,
-        reset: reset
+        pauseSession: pauseSession,
+        resetSession: resetSession,
+        endSession: endSession,
     };
 
     const middleThirdProps: MiddleThirdProps = {
@@ -83,7 +92,7 @@ export function Meditation() {
     };
 
     const bottomThirdProps: BottomThirdProps = {
-        reset: reset,
+        reset: resetSession,
         inProgress: playing,
         toggleProgress: () => setPlaying(!playing),
         setDuration: setDuration,

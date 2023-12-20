@@ -67,6 +67,7 @@ interface BottomThirdProps {
 interface TopThirdProps {
     inProgress: boolean;
     toggleProgress: () => void;
-    pause: () => void;
-    reset: () => void;
+    pauseSession: () => void;
+    resetSession: () => void;
+    endSession: () => void;
 }
