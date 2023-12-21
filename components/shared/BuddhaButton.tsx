@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import { BuddhaButtonProps } from '../../types'
+import { BuddhaButtonProps } from '@types'
 
 export const BuddhaButton: React.FC<BuddhaButtonProps> = (props: BuddhaButtonProps) => {
     const { title, action, selected, style } = props
