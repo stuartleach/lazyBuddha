@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View} from 'react-native'
-import {ControlPanelProps} from '@types'
-import {controlPanelStyles} from '@styles'
+import {ControlPanelProps} from '@/types'
+import {controlPanelStyles} from '@/styles'
 
 export function StartButton(props: {
     startSession: () => void

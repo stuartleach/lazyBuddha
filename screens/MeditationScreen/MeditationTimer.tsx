@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { CountdownProps, MeditationTimerProps } from '@types'
+import { CountdownProps, MeditationTimerProps } from '@/types'
 import { Animated, Text, View } from 'react-native'
 import { Circle, Svg } from 'react-native-svg'
-import { activeTheme } from '@styles'
-import { meditationTimerStyles } from '@styles/theme'
+import { activeTheme } from '@/styles'
+import { meditationTimerStyles } from '@/styles/theme'
 
 const Countdown: React.FC<CountdownProps> = (props) => {
     const { timeLeftInMilliseconds, totalMilliseconds, circleDiameter } = props

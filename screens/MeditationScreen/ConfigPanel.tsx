@@ -1,8 +1,8 @@
 import { Text, View, Animated } from 'react-native'
-import { ConfigPanelProps } from '@types'
+import { ConfigPanelProps } from '@/types'
 import React, { useEffect, useState } from 'react'
-import { addUnitsToDuration } from '@utils'
-import { configPanelStyles, controlPanelStyles } from '@styles/theme'
+import { addUnitsToDuration } from '@/utils'
+import { configPanelStyles, controlPanelStyles } from '@/styles'
 
 const SelectionMenu = ({ onChange, setVisible, items }) => {
     const itemsPerColumn = 3

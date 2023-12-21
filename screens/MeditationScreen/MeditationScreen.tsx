@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { ConfigPanelProps, MeditationTimerProps, ControlPanelProps } from '@types'
+import { ConfigPanelProps, MeditationTimerProps, ControlPanelProps } from '@/types'
 import { StatusBar } from 'expo-status-bar'
-import { ConfigPanel } from '@screens/MeditationScreen/ConfigPanel'
-import { ControlPanel } from '@screens/MeditationScreen/ControlPanel'
-import { MeditationTimer } from '@screens/MeditationScreen/MeditationTimer'
-import { useSoundManager } from '@utils'
-import { mainStyles } from '@styles'
-import { useTimerManager } from '@utils/hooks'
+import { ConfigPanel } from '@/screens/MeditationScreen/ConfigPanel'
+import { ControlPanel } from '@/screens/MeditationScreen/ControlPanel'
+import { MeditationTimer } from '@/screens/MeditationScreen/MeditationTimer'
+import { useSoundManager } from '@/utils'
+import { mainStyles } from '@/styles'
+import { useTimerManager } from '@/utils/hooks'
 
 export function MeditationScreen() {
     const initialDuration = 2

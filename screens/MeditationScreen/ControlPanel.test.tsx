@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native'
 import React from 'react'
-import { ControlPanel } from '@screens/MeditationScreen/ControlPanel'
+import { ControlPanel } from '@/screens/MeditationScreen/ControlPanel'
 
 describe('TopThird', () => {
     it('renders correctly', () => {

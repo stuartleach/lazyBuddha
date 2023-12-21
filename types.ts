@@ -1,7 +1,7 @@
 import React from "react";
 import {ViewStyle} from 'react-native';
 
-interface BuddhaButtonProps {
+export interface BuddhaButtonProps {
     title: string,
     action: () => void,
     selected?: boolean,
@@ -9,7 +9,7 @@ interface BuddhaButtonProps {
     style?: ViewStyle
 }
 
-interface ControlsProps {
+export interface ControlsProps {
     playing: boolean;
     toggleProgress: () => void;
     reset: () => void;
@@ -18,13 +18,13 @@ interface ControlsProps {
     setSoundName: (value: (((prevState: {}) => {}) | {})) => void;
 }
 
-interface CountdownProps {
+export interface CountdownProps {
     timeLeftInMilliseconds: number;
     totalMilliseconds: number;
     circleDiameter: number;
 }
 
-interface MeditationTimerProps {
+export interface MeditationTimerProps {
     height: any;
     duration: any;
     playing: any;
@@ -36,7 +36,7 @@ interface MeditationTimerProps {
     testID: string
 }
 
-interface ConfigPanelProps {
+export interface ConfigPanelProps {
     reset: () => void;
     playing: boolean;
     toggleProgress: () => void;
@@ -52,7 +52,7 @@ interface ConfigPanelProps {
     setTimerIsVisible: (value: boolean) => void;
 }
 
-interface ControlPanelProps {
+export interface ControlPanelProps {
     playing: boolean;
     started: boolean;
     startSession: () => void;

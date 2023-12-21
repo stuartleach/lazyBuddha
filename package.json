@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@babel/plugin-transform-export-namespace-from": "^7.23.4",
     "@babel/preset-react": "^7.23.3",
     "@babel/runtime": "^7.23.6",
     "@expo-google-fonts/quicksand": "^0.2.3",
@@ -30,7 +31,9 @@
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "babel": "^6.23.0",
     "babel-plugin-module-resolver": "^5.0.0",
+    "babel-preset-react-app": "^10.0.1",
     "css-select": "^5.1.0",
     "d3": "^7.8.5",
     "expo": "^49.0.21",

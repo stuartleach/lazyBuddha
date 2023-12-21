@@ -7,74 +7,13 @@
       "node"
     ],
     "baseUrl": "./",
-    // This must be set if "paths" is set
     "paths": {
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@fonts/*": [
-        "assets/fonts/*"
-      ],
-      "@utils": [
-        "utils"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@components": [
-        "components"
-      ],
-      "@screens/*": [
-        "screens/*"
-      ],
-      "@screens": [
-        "screens"
-      ],
-      "@navigation/*": [
-        "navigation/*"
-      ],
-      "@navigation": [
-        "navigation"
-      ],
-      "@assets/*": [
-        "assets/*"
-      ],
-      "@sounds/*": [
-        "assets/sounds/*"
-      ],
-      "@assets": [
-        "assets"
-      ],
-      "@sounds": [
-        "assets/sounds"
-      ],
-      "@constants/*": [
-        "constants/*"
-      ],
-      "@constants": [
-        "constants"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@hooks": [
-        "hooks"
-      ],
-      "@types/*": [
-        "types/*"
-      ],
-      "@types": [
-        "types"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@styles": [
-        "styles"
+      "@/*": [
+        "./*"
       ]
-      // Adjust the path according to your project structure
-    }
+    },
+    "extends": "expo/tsconfig.base",
+    "allowSyntheticDefaultImports": true
   },
   "extends": "expo/tsconfig.base"
 }
-

@@ -1,4 +1,4 @@
-import {hexToRGB} from "@utils";
+import {hexToRGB} from "@/utils";
 import {StyleSheet} from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 

@@ -2,8 +2,8 @@ import React, {useCallback, useEffect, useState} from 'react'
 import {Dimensions, StyleSheet, View} from 'react-native' // or from 'react-native-paper' or any other UI library you're using
 import * as SplashScreen from 'expo-splash-screen'
 import * as Font from 'expo-font'
-import {MeditationScreen} from '@screens/MeditationScreen/MeditationScreen'
-import {gradientColors} from '@styles/theme'
+import {MeditationScreen} from '@/screens/MeditationScreen/MeditationScreen'
+import {gradientColors} from '@/styles/theme'
 import Svg, {Defs, RadialGradient, Rect, Stop} from 'react-native-svg'
 
 const {width, height} = Dimensions.get('window')
@@ -17,11 +17,11 @@ function App() {
         async function prepare() {
             try {
                 await Font.loadAsync({
-                    'Lato-Regular': require('@fonts/Lato-Regular.ttf'),
-                    'Lato-Bold': require('@fonts/Lato-Bold.ttf'),
-                    'Lato-Thin': require('@fonts/Lato-Thin.ttf'),
-                    'Lato-Light': require('@fonts/Lato-Light.ttf'),
-                    'Lato-Black': require('@fonts/Lato-Black.ttf'),
+                    'Lato-Regular': require('@/assets/fonts/Lato-Regular.ttf'),
+                    'Lato-Bold': require('@/assets/fonts/Lato-Bold.ttf'),
+                    'Lato-Thin': require('@/assets/fonts/Lato-Thin.ttf'),
+                    'Lato-Light': require('@/assets/fonts/Lato-Light.ttf'),
+                    'Lato-Black': require('@/assets/fonts/Lato-Black.ttf'),
                 })
                 // await loadSound("Ocean");
             } catch (e) {
