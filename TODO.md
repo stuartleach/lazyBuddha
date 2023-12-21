@@ -16,3 +16,7 @@
 - Decide how to store data
 - Add the ability to log in with a Google account
 - Add the ability to track streaks
+
+
+
+### Code Review:

@@ -1,17 +1,12 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { Text, View } from 'react-native' // or from 'react-native-paper' or any other UI library you're using
-import { loadSound } from '@utils'
+import React, {useCallback, useEffect, useState} from 'react'
+import {Dimensions, StyleSheet, View} from 'react-native' // or from 'react-native-paper' or any other UI library you're using
 import * as SplashScreen from 'expo-splash-screen'
 import * as Font from 'expo-font'
-import { MeditationScreen } from '@screens/MeditationScreen/MeditationScreen'
-import { activeTheme } from '@styles'
-import { LinearGradient } from 'expo-linear-gradient'
-import { gradientColors } from '@styles/theme'
-import { StyleSheet } from 'react-native'
-import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg'
-import { Dimensions } from 'react-native'
+import {MeditationScreen} from '@screens/MeditationScreen/MeditationScreen'
+import {gradientColors} from '@styles/theme'
+import Svg, {Defs, RadialGradient, Rect, Stop} from 'react-native-svg'
 
-const { width, height } = Dimensions.get('window')
+const {width, height} = Dimensions.get('window')
 
 SplashScreen.preventAutoHideAsync().then((r) => console.log('SplashScreen.preventAutoHideAsync()', r))
 
@@ -73,16 +68,12 @@ function App() {
                                 stopOpacity='1'
                             />
                         ))}
-                        {/*<Stop offset="0%" stopColor={gradientColors[0]} stopOpacity="1"/>*/}
-                        {/*<Stop offset="100%" stopColor={gradientColors[1]} stopOpacity="1"/>*/}
                     </RadialGradient>
                 </Defs>
-                <Rect x={(-1 * width) / 2} y='0' width={width * 2} height={height} fill='url(#grad)' />
+                <Rect x={(-1 * width) / 2} y='0' width={width * 2} height={height} fill='url(#grad)'/>
             </Svg>
-
-            {/* Your Content */}
             <View onLayout={onLayoutRootView} style={styles.content}>
-                <MeditationScreen />
+                <MeditationScreen/>
             </View>
         </View>
     )
@@ -98,7 +89,6 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         alignItems: 'center',
-        // Apply additional styles if necessary
     },
 })
 

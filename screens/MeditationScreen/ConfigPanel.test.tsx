@@ -14,7 +14,9 @@ const mockProps: ConfigPanelProps = {
     setDuration: jest.fn(),
     soundName: 'Ocean',
     setTimeLeftInMilliseconds: jest.fn(),
-    testID: 'bottom-third',
+    testID: 'config-panel',
+    timerIsVisible: false,
+    setTimerIsVisible: jest.fn(),
 }
 
 describe('BottomThird', () => {

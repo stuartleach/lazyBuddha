@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +245,7 @@
       <workItem from="1703022871287" duration="16904000" />
       <workItem from="1703079425406" duration="10180000" />
       <workItem from="1703089620806" duration="5239000" />
-      <workItem from="1703095767104" duration="4771000" />
+      <workItem from="1703095767104" duration="5080000" />
     </task>
     <servers />
   </component>

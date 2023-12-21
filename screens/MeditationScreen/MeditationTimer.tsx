@@ -73,7 +73,6 @@ export const MeditationTimer = (props: { meditationTimerProps: MeditationTimerPr
     return (
         <Animated.View style={[meditationTimerStyles.meditationTimerContainer, { height }, { opacity: opacityAnim }]}>
             <View style={[meditationTimerStyles.smallContainer]}>
-                {/*{timerIsVisible && (*/}
                 <View style={meditationTimerStyles.countdown}>
                     <Countdown
                         timeLeftInMilliseconds={timeLeftInMilliseconds}

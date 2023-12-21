@@ -55,6 +55,17 @@ export const EndButton = (props: { endSession: () => void; testID: string }) => 
     )
 }
 
+export const ControlButton = (props: { onPress: () => void; testID: string; label: string }) => {
+    const { onPress, label, testID } = props
+    return (
+        <View style={controlPanelStyles.smallButton}>
+            <Text style={controlPanelStyles.smallButtonText} onPress={onPress}>
+                {label}
+            </Text>
+        </View>
+    )
+}
+
 export function ControlPanel(props: { controlPanelProps: ControlPanelProps }) {
     const { playing, pauseSession, resetSession, startSession, resumeSession, started, endSession } =
         props.controlPanelProps
@@ -73,11 +84,11 @@ export function ControlPanel(props: { controlPanelProps: ControlPanelProps }) {
                     />
                 </View>
                 <View style={controlPanelStyles.rightHalf}>
-                    <EndButton testID='end-button' endSession={endSession} />
+                    <ControlButton label="End" testID='end-button' onPress={endSession} />
                     <View style={{ flex: 1 }}>
                         <Text> </Text>
                     </View>
-                    <ResetButton testID='reset-button' resetSession={resetSession} />
+                    <ControlButton label="Reset" testID='reset-button' onPress={resetSession} />
                 </View>
             </View>
         </View>
