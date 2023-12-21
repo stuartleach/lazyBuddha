@@ -7,18 +7,9 @@
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +115,17 @@
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "android.gradle.sync.needed": "true",
+    "javascript.nodejs.core.library.configured.version": "21.2.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.5",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/Screenshots",
+    "last_opened_file_path": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/jest",
-    "nodejs_package_manager_path": "yarn",
+    "nodejs.jest.jest_package": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/jest",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "pnpm",
     "npm.ios.executor": "Run",
     "npm.start --clear.executor": "Run",
     "npm.start.executor": "Run",
@@ -140,8 +134,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -256,7 +250,8 @@
       <workItem from="1703022871287" duration="16904000" />
       <workItem from="1703079425406" duration="10180000" />
       <workItem from="1703089620806" duration="5239000" />
-      <workItem from="1703095767104" duration="8560000" />
+      <workItem from="1703095767104" duration="9954000" />
+      <workItem from="1703183738891" duration="257000" />
     </task>
     <servers />
   </component>

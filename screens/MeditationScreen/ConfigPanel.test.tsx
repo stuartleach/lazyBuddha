@@ -1,7 +1,7 @@
 import { render, fireEvent } from '@testing-library/react-native'
 import React from 'react'
-import { ConfigPanel } from '@screens/MeditationScreen/ConfigPanel'
-import { ConfigPanelProps } from '@types'
+import { ConfigPanel } from '@/screens/MeditationScreen/ConfigPanel'
+import { ConfigPanelProps } from '@/types'
 
 const mockProps: ConfigPanelProps = {
     reset: jest.fn(),

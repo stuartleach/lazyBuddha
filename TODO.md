@@ -20,3 +20,7 @@
 
 
 ### Code Review:
+- [x] Remove unneeded aliases, replacing with '@' as project root
+- [x] Remove unneeded comments
+- [ ] Refactor code to reuse components
+- [ ] Prettier + eslint config

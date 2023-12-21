@@ -1,10 +1,10 @@
-import { Text, View, Animated } from 'react-native'
-import { ConfigPanelProps } from '@/types'
-import React, { useEffect, useState } from 'react'
-import { addUnitsToDuration } from '@/utils'
-import { configPanelStyles, controlPanelStyles } from '@/styles'
+import {Text, View, Animated} from 'react-native'
+import {ConfigPanelProps} from '@/types'
+import React, {useEffect, useState} from 'react'
+import {addUnitsToDuration} from '@/utils'
+import {configPanelStyles, controlPanelStyles} from '@/styles'
 
-const SelectionMenu = ({ onChange, setVisible, items }) => {
+const SelectionMenu = ({onChange, setVisible, items}) => {
     const itemsPerColumn = 3
     const columns = []
     for (let i = 0; i < items.length; i += itemsPerColumn) {
@@ -35,7 +35,7 @@ const SelectionMenu = ({ onChange, setVisible, items }) => {
                                 | React.ReactPortal
                             value: any
                         }) => (
-                            <View key={Math.random()} style={[controlPanelStyles.smallButton, { marginVertical: 10 }]}>
+                            <View key={Math.random()} style={[controlPanelStyles.smallButton, {marginVertical: 10}]}>
                                 <Text
                                     style={controlPanelStyles.smallButtonText}
                                     onPress={() => {
@@ -54,10 +54,12 @@ const SelectionMenu = ({ onChange, setVisible, items }) => {
 }
 
 export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
-    const { onChangeDuration, onChangeSound, duration, soundName, timerIsVisible, setTimerIsVisible } =
+    const {onChangeDuration, onChangeSound, duration, soundName, timerIsVisible, setTimerIsVisible} =
         props.configPanelProps
     const [durationSelectionMenuVisible, setDurationSelectionMenuVisible] = useState(false)
     const [soundSelectionMenuVisible, setSoundSelectionMenuVisible] = useState(false)
+    const [settingsMenuVisible, setSettingsMenuVisible] = useState(false)
+
 
     useEffect(() => {
         if (durationSelectionMenuVisible || soundSelectionMenuVisible) {
@@ -106,25 +108,25 @@ export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
 
     // TODO: Import these from somewhere else
     const timeItems = [
-        { label: '30 seconds', value: '0.5' },
-        { label: '1 minute', value: '1' },
-        { label: '2 minutes', value: '2' },
-        { label: '3 minutes', value: '3' },
-        { label: '5 minutes', value: '5' },
-        { label: '10 minutes', value: '10' },
+        {label: '30 seconds', value: '0.5'},
+        {label: '1 minute', value: '1'},
+        {label: '2 minutes', value: '2'},
+        {label: '3 minutes', value: '3'},
+        {label: '5 minutes', value: '5'},
+        {label: '10 minutes', value: '10'},
     ]
 
     // TODO: Import these from somewhere else
     const soundItems = [
-        { label: 'Ocean', value: 'Ocean' },
-        { label: 'Rain', value: 'Rain' },
-        { label: 'Forest', value: 'Forest' },
-        { label: 'Fire', value: 'Fire' },
-        { label: 'Wind', value: 'Wind' },
-        { label: 'White Noise', value: 'White Noise' },
-        { label: 'Stream', value: 'Stream' },
-        { label: 'Birds', value: 'Birds' },
-        { label: 'Cafe', value: 'Cafe' },
+        {label: 'Ocean', value: 'Ocean'},
+        {label: 'Rain', value: 'Rain'},
+        {label: 'Forest', value: 'Forest'},
+        {label: 'Fire', value: 'Fire'},
+        {label: 'Wind', value: 'Wind'},
+        {label: 'White Noise', value: 'White Noise'},
+        {label: 'Stream', value: 'Stream'},
+        {label: 'Birds', value: 'Birds'},
+        {label: 'Cafe', value: 'Cafe'},
     ]
 
     return (
@@ -156,7 +158,14 @@ export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
                     />
                 )}
                 {!durationSelectionMenuVisible && !soundSelectionMenuVisible && (
-                    <>
+                    <View style={{
+                        flexDirection: 'row',
+                        width: 200,
+                    }}><View style={{
+                        flexDirection: 'column',
+                        width: 200,
+                        flex: 1,
+                    }}>
                         <View style={configPanelStyles.leftHalf}>
                             <View style={configPanelStyles.smallButton}>
                                 <Text
@@ -177,7 +186,15 @@ export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
                                 </Text>
                             </View>
                         </View>
-                    </>
+                        <View style={{
+                            ...configPanelStyles.smallContainer,
+                            flex: 1,
+                            width: 100,
+                        }}>
+                            <Text>Settings</Text>
+                        </View>
+                    </View>
+                    </View>
                 )}
             </View>
         </Animated.View>
