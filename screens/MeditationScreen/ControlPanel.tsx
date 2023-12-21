@@ -3,6 +3,15 @@ import {Text, View} from 'react-native'
 import {ControlPanelProps} from '@/types'
 import {controlPanelStyles} from '@/styles'
 
+export interface ControlsProps {
+    playing: boolean;
+    toggleProgress: () => void;
+    reset: () => void;
+    onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
+    onChangeSound: (newSound: React.SetStateAction<string>) => void;
+    setSoundName: (value: (((prevState: {}) => {}) | {})) => void;
+}
+
 export function StartButton(props: {
     startSession: () => void
     pauseSession: () => void

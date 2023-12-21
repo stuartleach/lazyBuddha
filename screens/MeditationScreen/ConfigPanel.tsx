@@ -1,20 +1,15 @@
 import {Text, View, Animated} from 'react-native'
-import {ConfigPanelProps} from '@/types'
+import {ConfigPanelProps} from '@/screens/MeditationScreen/MeditationScreen'
 import React, {useEffect, useState} from 'react'
 import {addUnitsToDuration} from '@/utils'
 import {configPanelStyles, controlPanelStyles} from '@/styles'
+import {settingsItems, soundsItems, timesItems} from "@/screens/MeditationScreen/consts";
 
 const SelectionMenu = ({onChange, setVisible, items}) => {
     const itemsPerColumn = 3
     const columns = []
     for (let i = 0; i < items.length; i += itemsPerColumn) {
         columns.push(items.slice(i, i + itemsPerColumn))
-    }
-    const [selectedValue, setSelectedValue] = useState('2')
-    const handleValueChange = (value: React.SetStateAction<string>) => {
-        console.log('value', value)
-        setSelectedValue(value)
-        onChange(value)
     }
     const handlePress = (value: React.SetStateAction<string>) => {
         onChange(value)
@@ -53,43 +48,71 @@ const SelectionMenu = ({onChange, setVisible, items}) => {
     )
 }
 
+
+
+
+
+
+
+
+const NestedMenu = ({ menuItems, onSelect, path = [] }) => {
+  const [currentMenu, setCurrentMenu] = useState(menuItems);
+  const [menuStack, setMenuStack] = useState([]);
+
+  const handleItemSelect = (item) => {
+    if (item.subItems) {
+      setMenuStack([...menuStack, currentMenu]);
+      setCurrentMenu(item.subItems);
+    } else {
+      onSelect([...path, item.label]);
+    }
+  };
+
+  const handleBack = () => {
+    const previousMenu = menuStack.pop();
+    setMenuStack(menuStack);
+    setCurrentMenu(previousMenu);
+  };
+
+  return (
+    <View>
+      {menuStack.length > 0 && (
+        <Text onPress={handleBack}>Back</Text>
+      )}
+      {currentMenu.map((item, index) => (
+        <Text key={index} onPress={() => handleItemSelect(item)}>
+          {item.label}
+        </Text>
+      ))}
+    </View>
+  );
+};
+
+
+<NestedMenu
+  menuItems={yourNestedMenuStructure}
+  onSelect={(path) => console.log('Selected path:', path)}
+/>
+
+
+
+
+
+
+
+
 export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
-    const {onChangeDuration, onChangeSound, duration, soundName, timerIsVisible, setTimerIsVisible} =
+    const {onChangeDuration, onChangeSound, onChangeSettings, duration, soundName, timerIsVisible, setTimerIsVisible} =
         props.configPanelProps
     const [durationSelectionMenuVisible, setDurationSelectionMenuVisible] = useState(false)
     const [soundSelectionMenuVisible, setSoundSelectionMenuVisible] = useState(false)
-    const [settingsMenuVisible, setSettingsMenuVisible] = useState(false)
+    const [settingSelectionMenuVisible, setSettingSelectionMenuVisible] = useState(false)
 
-
-    useEffect(() => {
-        if (durationSelectionMenuVisible || soundSelectionMenuVisible) {
-            setTimerIsVisible(false)
-            setFlex(2)
-        } else {
-            setTimerIsVisible(true)
-            setFlex(1)
-        }
-        console.log('durationSelectionMenuVisible', durationSelectionMenuVisible)
-    }, [durationSelectionMenuVisible, soundSelectionMenuVisible, setTimerIsVisible])
-
-    const [flex, setFlex] = useState(1)
-
-    const conditionalStyle = () => {
-        if (durationSelectionMenuVisible || soundSelectionMenuVisible) {
-            return {
-                height: '75%',
-            }
-        } else {
-            return {
-                height: configPanelStyles.configPanelContainer.height,
-            }
-        }
-    }
 
     const [heightAnim] = useState(new Animated.Value(0.3)) // Start at 30%
 
     useEffect(() => {
-        if (durationSelectionMenuVisible || soundSelectionMenuVisible) {
+        if (durationSelectionMenuVisible || soundSelectionMenuVisible || settingSelectionMenuVisible) {
             setTimerIsVisible(false)
             Animated.timing(heightAnim, {
                 toValue: 0.4, // Animate to 75%
@@ -104,30 +127,8 @@ export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
                 useNativeDriver: false, // Height is not supported with native driver
             }).start()
         }
-    }, [durationSelectionMenuVisible, soundSelectionMenuVisible, setTimerIsVisible, heightAnim])
+    }, [durationSelectionMenuVisible, soundSelectionMenuVisible, settingSelectionMenuVisible, setTimerIsVisible, heightAnim])
 
-    // TODO: Import these from somewhere else
-    const timeItems = [
-        {label: '30 seconds', value: '0.5'},
-        {label: '1 minute', value: '1'},
-        {label: '2 minutes', value: '2'},
-        {label: '3 minutes', value: '3'},
-        {label: '5 minutes', value: '5'},
-        {label: '10 minutes', value: '10'},
-    ]
-
-    // TODO: Import these from somewhere else
-    const soundItems = [
-        {label: 'Ocean', value: 'Ocean'},
-        {label: 'Rain', value: 'Rain'},
-        {label: 'Forest', value: 'Forest'},
-        {label: 'Fire', value: 'Fire'},
-        {label: 'Wind', value: 'Wind'},
-        {label: 'White Noise', value: 'White Noise'},
-        {label: 'Stream', value: 'Stream'},
-        {label: 'Birds', value: 'Birds'},
-        {label: 'Cafe', value: 'Cafe'},
-    ]
 
     return (
         // @ts-ignore
@@ -147,56 +148,96 @@ export const ConfigPanel = (props: { configPanelProps: ConfigPanelProps }) => {
                     <SelectionMenu
                         onChange={onChangeDuration}
                         setVisible={setDurationSelectionMenuVisible}
-                        items={timeItems}
+                        items={timesItems}
                     />
                 )}
                 {soundSelectionMenuVisible && (
                     <SelectionMenu
                         onChange={onChangeSound}
                         setVisible={setSoundSelectionMenuVisible}
-                        items={soundItems}
+                        items={soundsItems}
                     />
                 )}
-                {!durationSelectionMenuVisible && !soundSelectionMenuVisible && (
+                {settingSelectionMenuVisible && (
+                    <SelectionMenu
+                        onChange={onChangeSettings}
+                        setVisible={setSettingSelectionMenuVisible}
+                        items={settingsItems}
+                    />
+                )}
+                {!durationSelectionMenuVisible && !soundSelectionMenuVisible && !settingSelectionMenuVisible && (
                     <View style={{
-                        flexDirection: 'row',
-                        width: 200,
-                    }}><View style={{
                         flexDirection: 'column',
-                        width: 200,
-                        flex: 1,
+                        width: "100%",
                     }}>
-                        <View style={configPanelStyles.leftHalf}>
-                            <View style={configPanelStyles.smallButton}>
-                                <Text
-                                    style={controlPanelStyles.smallButtonText}
-                                    onPress={() => setDurationSelectionMenuVisible(!durationSelectionMenuVisible)}
-                                >
-                                    {addUnitsToDuration(duration)}
-                                </Text>
+                        <View style={{
+                            flexDirection: 'row',
+                            // width: 200,
+                            flex: 2,
+                        }}>
+                            <View style={configPanelStyles.half}>
+                                <View style={configPanelStyles.buttonContainer}>
+                                    <Text
+                                        style={controlPanelStyles.smallButtonText}
+                                        onPress={() => setDurationSelectionMenuVisible(!durationSelectionMenuVisible)}
+                                    >
+                                        {addUnitsToDuration(duration)}
+                                    </Text>
+                                </View>
                             </View>
-                        </View>
-                        <View style={configPanelStyles.rightHalf}>
-                            <View style={configPanelStyles.smallButton}>
-                                <Text
-                                    style={controlPanelStyles.smallButtonText}
-                                    onPress={() => setSoundSelectionMenuVisible(!soundSelectionMenuVisible)}
-                                >
-                                    {soundName}
-                                </Text>
+                            <View style={configPanelStyles.half}>
+                                <View style={configPanelStyles.buttonContainer}>
+                                    <Text
+                                        style={controlPanelStyles.smallButtonText}
+                                        onPress={() => setSoundSelectionMenuVisible(!soundSelectionMenuVisible)}
+                                    >
+                                        {soundName}
+                                    </Text>
+                                </View>
                             </View>
+
                         </View>
                         <View style={{
-                            ...configPanelStyles.smallContainer,
+                            ...configPanelStyles.half,
                             flex: 1,
-                            width: 100,
+                            marginTop: 0,
                         }}>
-                            <Text>Settings</Text>
+                            <View style={configPanelStyles.buttonContainer}>
+                                <Text
+                                    style={controlPanelStyles.smallButtonText}
+                                    onPress={() => setSettingSelectionMenuVisible(!settingSelectionMenuVisible)}
+                                >
+                                    <Text>Settings</Text>
+                                </Text>
+                            </View>
                         </View>
-                    </View>
                     </View>
                 )}
             </View>
         </Animated.View>
     )
 }
+
+const menuItems = [
+  {
+    label: 'Menu 1',
+    subItems: [
+      { label: 'Submenu 1-1' },
+      { label: 'Submenu 1-2' },
+    ],
+  },
+    {
+        label: 'Menu 2',
+        subItems: [
+        { label: 'Submenu 2-1' },
+        { label: 'Submenu 2-2' },
+        ],
+    },
+    {
+        label: 'Menu 3',
+        subItems: [
+        { label: 'Submenu 3-1' },
+        { label: 'Submenu 3-2' },
+        ],
+    },
+];

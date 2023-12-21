@@ -256,31 +256,14 @@ export const configPanelStyles = StyleSheet.create({
         justifyContent: "space-between"
     },
 
-    leftHalf: {
-        flexDirection: "column",
-        justifyContent: "center",
+    half: {
+        // flexDirection: "column",
+        // justifyContent: "center",
         flex: 1,
         margin: 10,
     },
-    rightHalf: {
-        flexDirection: "column",
-        justifyContent: "center",
-        flex: 1,
-        margin: 10,
-    },
-    startButton: {
-        paddingLeft: 20,
-        paddingRight: 20,
-        paddingTop: 10,
-        paddingBottom: 10,
-        borderRadius: 10,
-        fontWeight: 'bold',
-        backgroundColor: activeTheme.buttonBackground,
-        borderColor: hexToRGB(activeTheme.textTheme, 0.1),
-        borderStyle: "solid",
-        justifyContent: "center",
-    },
-    smallButton: {
+
+    buttonContainer: {
         width: "100%",
         height: "100%",
         flex: 1,
@@ -289,7 +272,7 @@ export const configPanelStyles = StyleSheet.create({
         backgroundColor: activeTheme.buttonBackground,
         borderColor: hexToRGB(activeTheme.textTheme, 0.1),
     },
-    smallButtonText: {
+    buttonText: {
         textAlign: 'center',
         fontFamily: fontTheme.black,
         color: activeTheme.textTheme,

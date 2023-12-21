@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { CountdownProps, MeditationTimerProps } from '@/types'
-import { Animated, Text, View } from 'react-native'
-import { Circle, Svg } from 'react-native-svg'
-import { activeTheme } from '@/styles'
-import { meditationTimerStyles } from '@/styles/theme'
+import React, {useEffect, useState} from 'react'
+import {MeditationTimerProps} from '@/screens/MeditationScreen/MeditationScreen'
+import {Animated, Text, View} from 'react-native'
+import {Circle, Svg} from 'react-native-svg'
+import {activeTheme} from '@/styles'
+import {meditationTimerStyles} from '@/styles/theme'
+
+interface CountdownProps {
+    timeLeftInMilliseconds: number;
+    totalMilliseconds: number;
+    circleDiameter: number;
+}
 
 const Countdown: React.FC<CountdownProps> = (props) => {
-    const { timeLeftInMilliseconds, totalMilliseconds, circleDiameter } = props
+    const {timeLeftInMilliseconds, totalMilliseconds, circleDiameter} = props
     const progress = totalMilliseconds ? timeLeftInMilliseconds / totalMilliseconds : 0
     const radius = circleDiameter / 2 - 20
     const [strokeWidth, setStrokeWidth] = useState(10)
@@ -16,7 +22,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     const seconds = Math.floor((timeLeftInMilliseconds % 60000) / 1000)
     const displayTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
     return (
-        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Svg height={circleDiameter} width={circleDiameter} viewBox={`0 0 220 220`}>
                 <Circle
                     cx='110'
@@ -51,7 +57,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
 }
 
 export const MeditationTimer = (props: { meditationTimerProps: MeditationTimerProps }) => {
-    const { height, duration, playing, started, timeLeftInMilliseconds, timerIsVisible } = props.meditationTimerProps
+    const {height, duration, playing, started, timeLeftInMilliseconds, timerIsVisible} = props.meditationTimerProps
     const [opacityAnim] = useState(new Animated.Value(1)) // Start fully visible
 
     useEffect(() => {
@@ -71,7 +77,7 @@ export const MeditationTimer = (props: { meditationTimerProps: MeditationTimerPr
     }, [timerIsVisible, opacityAnim])
 
     return (
-        <Animated.View style={[meditationTimerStyles.meditationTimerContainer, { height }, { opacity: opacityAnim }]}>
+        <Animated.View style={[meditationTimerStyles.meditationTimerContainer, {height}, {opacity: opacityAnim}]}>
             <View style={[meditationTimerStyles.smallContainer]}>
                 <View style={meditationTimerStyles.countdown}>
                     <Countdown

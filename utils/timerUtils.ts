@@ -35,7 +35,7 @@ export const timer = (duration: number, setTimeLeftInMilliseconds: (value: numbe
 };
 
 export const addUnitsToDuration = (duration: number) => {
-    if (duration === 1) {
+    if (duration == 1) {
         return `${duration} minute`;
     }
     if (duration < 1) {

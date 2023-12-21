@@ -1,13 +1,54 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { View } from 'react-native'
-import { ConfigPanelProps, MeditationTimerProps, ControlPanelProps } from '@/types'
-import { StatusBar } from 'expo-status-bar'
-import { ConfigPanel } from '@/screens/MeditationScreen/ConfigPanel'
-import { ControlPanel } from '@/screens/MeditationScreen/ControlPanel'
-import { MeditationTimer } from '@/screens/MeditationScreen/MeditationTimer'
-import { useSoundManager } from '@/utils'
-import { mainStyles } from '@/styles'
-import { useTimerManager } from '@/utils/hooks'
+import React, {useCallback, useEffect, useState} from 'react'
+import {View} from 'react-native'
+import {StatusBar} from 'expo-status-bar'
+import {ConfigPanel} from '@/screens/MeditationScreen/ConfigPanel'
+import {ControlPanel} from '@/screens/MeditationScreen/ControlPanel'
+import {MeditationTimer} from '@/screens/MeditationScreen/MeditationTimer'
+import {useSoundManager} from '@/utils'
+import {mainStyles} from '@/styles'
+import {useTimerManager} from '@/utils/hooks'
+
+
+export interface ControlPanelProps {
+    playing: boolean;
+    started: boolean;
+    startSession: () => void;
+    pauseSession: () => void;
+    resumeSession: () => void;
+    resetSession: () => void;
+    endSession: () => void;
+    testID: string
+}
+
+export interface MeditationTimerProps {
+    height: any;
+    duration: any;
+    playing: any;
+    timeLeftInMilliseconds: any;
+    isRunning: boolean;
+    setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
+    started: any;
+    timerIsVisible: boolean;
+    testID: string
+}
+
+export interface ConfigPanelProps {
+    reset: () => void;
+    playing: boolean;
+    toggleProgress: () => void;
+    duration: number;
+    onChangeDuration: (newDuration: React.SetStateAction<number>) => void;
+    setDuration: (value) => void;
+    soundName: string;
+    setSoundName: (soundName: string) => void;
+    onChangeSound: (selectedSound: string) => void;
+    setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
+    testID: string
+    timerIsVisible: boolean;
+    setTimerIsVisible: (value: boolean) => void;
+    onChangeSettings: (value: boolean) => void;
+}
+
 
 export function MeditationScreen() {
     const initialDuration = 2
@@ -25,7 +66,7 @@ export function MeditationScreen() {
 
     const [timerIsVisible, setTimerIsVisible] = useState(true)
 
-    const { sound, loadSound, unloadSound, fadeIn, fadeOut } = useSoundManager(session.soundName)
+    const {sound, loadSound, unloadSound, fadeIn, fadeOut} = useSoundManager(session.soundName)
 
     useEffect(() => {
         return time.cleanup
@@ -57,19 +98,19 @@ export function MeditationScreen() {
     const startSession = useCallback(() => {
         console.log('Start session')
         time.startTimer()
-        setSession((prev) => ({ ...prev, started: true, playing: true }))
+        setSession((prev) => ({...prev, started: true, playing: true}))
     }, [])
 
     const pauseSession = useCallback(() => {
         time.pauseTimer()
         console.log('Pause session')
-        setSession((prev) => ({ ...prev, playing: false }))
+        setSession((prev) => ({...prev, playing: false}))
     }, [])
 
     const resumeSession = useCallback(() => {
         time.resumeTimer()
         console.log('Resume session')
-        setSession((prev) => ({ ...prev, playing: true }))
+        setSession((prev) => ({...prev, playing: true}))
     }, [])
 
     const resetSession = useCallback(() => {
@@ -134,6 +175,10 @@ export function MeditationScreen() {
         timerIsVisible: timerIsVisible,
     }
 
+    const handleSettingsChange = () => {
+        console.log('Settings changed to something blah blah')
+    }
+
     const configPanelProps: ConfigPanelProps = {
         reset: resetSession,
         playing: session.playing,
@@ -148,15 +193,16 @@ export function MeditationScreen() {
         testID: 'config-panel',
         timerIsVisible: timerIsVisible,
         setTimerIsVisible: setTimerIsVisible,
+        onChangeSettings: handleSettingsChange
     }
 
     return (
         <View style={mainStyles.main}>
             <View style={mainStyles.container}>
-                <StatusBar style='auto' />
-                <ControlPanel controlPanelProps={controlPanelProps} />
-                <MeditationTimer meditationTimerProps={meditationTimerProps} />
-                <ConfigPanel configPanelProps={configPanelProps} />
+                <StatusBar style='auto'/>
+                <ControlPanel controlPanelProps={controlPanelProps}/>
+                <MeditationTimer meditationTimerProps={meditationTimerProps}/>
+                <ConfigPanel configPanelProps={configPanelProps}/>
             </View>
         </View>
     )
