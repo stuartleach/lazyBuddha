@@ -1,4 +1,4 @@
 
-import {mainStyles, theme, fontTheme, bottomThirdStyles, middleThirdStyles, topThirdStyles, pickerSelectStyles} from "@styles/theme";
+import {mainStyles, activeTheme, fontTheme, configPanelStyles, meditationTimerStyles, controlPanelStyles, pickerSelectStyles} from "@styles/theme";
 
-export {mainStyles, theme, fontTheme, bottomThirdStyles, middleThirdStyles, topThirdStyles, pickerSelectStyles}
+export {mainStyles, activeTheme, fontTheme, configPanelStyles, meditationTimerStyles, controlPanelStyles, pickerSelectStyles}

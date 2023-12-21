@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="" />
+    <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/BottomThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/TopThird.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,43 +110,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Jest.MiddleThird.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/stuartleach/Dropbox/Coding/lazyBuddha/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;npm.ios.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start --clear.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Jest.MiddleThird.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "android.gradle.sync.needed": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/Screenshots",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/jest",
+    "nodejs_package_manager_path": "yarn",
+    "npm.ios.executor": "Run",
+    "npm.start --clear.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.web.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/stuartleach/Dropbox/Coding/lazyBuddha/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Screenshots" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -239,7 +255,8 @@
       <workItem from="1702934100288" duration="727000" />
       <workItem from="1703022871287" duration="16904000" />
       <workItem from="1703079425406" duration="10180000" />
-      <workItem from="1703089620806" duration="312000" />
+      <workItem from="1703089620806" duration="5239000" />
+      <workItem from="1703095767104" duration="4771000" />
     </task>
     <servers />
   </component>

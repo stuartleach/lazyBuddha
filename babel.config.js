@@ -1,8 +1,8 @@
 module.exports = function (api) {
-    api.cache(true);
+    api.cache(true)
     return {
-        presets: ['babel-preset-expo',
-            // '@babel/preset-env',
+        presets: [
+            'babel-preset-expo', // '@babel/preset-env',
             '@babel/preset-react',
             'module:metro-react-native-babel-preset',
         ],
@@ -14,15 +14,15 @@ module.exports = function (api) {
                 {
                     root: ['./'],
                     alias: {
-                        "@utils": "./utils",
-                        "@sounds": "./assets/sounds",
-                        "@styles": "./styles",
-                        "@screens": "./screens",
-                        "@components": "./components",
-                        "@assets": "./assets",
-                        "@constants": "./constants",
-                        "@navigation": "./navigation",
-                        "@fonts": "./assets/fonts",
+                        '@utils': './utils',
+                        '@sounds': './assets/sounds',
+                        '@styles': './styles',
+                        '@screens': './screens',
+                        '@components': './components',
+                        '@assets': './assets',
+                        '@constants': './constants',
+                        '@navigation': './navigation',
+                        '@fonts': './assets/fonts',
                     },
                 },
             ],

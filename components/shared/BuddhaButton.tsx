@@ -1,15 +1,17 @@
-import React from "react";
-import {Text, View, StyleSheet} from "react-native";
-import {BuddhaButtonProps} from "../../types";
+import React from 'react'
+import { Text, View, StyleSheet } from 'react-native'
+import { BuddhaButtonProps } from '../../types'
 
 export const BuddhaButton: React.FC<BuddhaButtonProps> = (props: BuddhaButtonProps) => {
-    const {title, action, selected, style} = props;
+    const { title, action, selected, style } = props
     return (
         <View style={[selected ? styles.buttonSelected : styles.button, style]}>
-            <Text style={styles.text} onPress={action}>{title}</Text>
+            <Text style={styles.text} onPress={action}>
+                {title}
+            </Text>
         </View>
     )
-};
+}
 
 const styles = StyleSheet.create({
     button: {
@@ -30,5 +32,5 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
-    }
+    },
 })

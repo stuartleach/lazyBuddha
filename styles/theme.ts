@@ -6,52 +6,86 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-
-export const colorsRaw = {
-    // backgroundRaw: "#8D97CB",
-    // textRaw: "#ffffff",
-    // buttonBackgroundRaw: "#A4AEDE",
-    // accentRaw: "#B2BAE2",
-    backgroundRaw: "#46A9CA",
-    backgroundAltRaw: "#38BAF0",
-    // textRaw: "#001C45",
-    textRaw: "#1A142F",
-    buttonBackgroundRaw: "#81C7DD",
-    accentRaw: "#FEFADC",
+const themes = {
+    "ocean": {
+        backgroundRaw: "#46A9CA",
+        backgroundAltRaw: "#38BAF0",
+        // textRaw: "#001C45",
+        textRaw: "#1A142F",
+        buttonBackgroundRaw: "#81C7DD",
+        accentRaw: "#FEFADC",
+    },
+    "forest": {
+        backgroundRaw: "#2B2D42",
+        backgroundAltRaw: "#1C1F2B",
+        textRaw: "#8D99AE",
+        buttonBackgroundRaw: "#EF233C",
+        accentRaw: "#D90429",
+    },
+    "fire": {
+        backgroundRaw: "#FFBA08",
+        backgroundAltRaw: "#FAA307",
+        textRaw: "#03071E",
+        buttonBackgroundRaw: "#F48C06",
+        accentRaw: "#E85D04",
+    },
+    "earth": {
+        backgroundRaw: "#A2D729",
+        backgroundAltRaw: "#8AC926",
+        textRaw: "#FFD166",
+        buttonBackgroundRaw: "#FF9F1C",
+        accentRaw: "#FF9F1C",
+    },
+    "sky": {
+        backgroundRaw: "#0D3B66",
+        backgroundAltRaw: "#0D3B66",
+        textRaw: "#FAF0CA",
+        buttonBackgroundRaw: "#F95738",
+        accentRaw: "#F95738",
+    },
+    "sun": {
+        backgroundRaw: "#FFC300",
+        backgroundAltRaw: "#FFC300",
+        textRaw: "#581845",
+        buttonBackgroundRaw: "#900C3F",
+        accentRaw: "#900C3F",
+    },
 }
 
-export const theme = {
-    backgroundTheme: hexToRGB(colorsRaw.backgroundRaw, 1),
-    textTheme: colorsRaw.textRaw,
+const themeSelection = "ocean";
+
+export const activeColorsRaw = {
+    backgroundRaw: themes[themeSelection].backgroundRaw,
+    backgroundAltRaw: themes[themeSelection].backgroundAltRaw,
+    textRaw: themes[themeSelection].textRaw,
+    buttonBackgroundRaw: themes[themeSelection].buttonBackgroundRaw,
+    accentRaw: themes[themeSelection].accentRaw,
+}
+
+export const activeTheme = {
+    backgroundRaw: activeColorsRaw.backgroundRaw,
+    backgroundAltRaw: activeColorsRaw.backgroundAltRaw,
+    buttonBackgroundRaw: activeColorsRaw.buttonBackgroundRaw,
+    backgroundTheme: hexToRGB(activeColorsRaw.backgroundRaw, 1),
+    textTheme: activeColorsRaw.textRaw,
     fontFamily: "Lato",
-    buttonBackground: hexToRGB(colorsRaw.buttonBackgroundRaw, 0.5),
-    accentTheme: hexToRGB(colorsRaw.accentRaw, 0.1),
+    buttonBackground: hexToRGB(activeColorsRaw.buttonBackgroundRaw, 0.5),
+    accentTheme: hexToRGB(activeColorsRaw.accentRaw, 0.1),
 }
 
 export const fontTheme = {
-    bold: theme.fontFamily + "-Bold",
-    regular: theme.fontFamily + "-Regular",
-    light: theme.fontFamily + "-Light",
-    thin: theme.fontFamily + "-Thin",
-    medium: theme.fontFamily + "-Medium",
-    semiBold: theme.fontFamily + "-SemiBold",
-    extraBold: theme.fontFamily + "-ExtraBold",
-    black: theme.fontFamily + "-Black",
+    bold: activeTheme.fontFamily + "-Bold",
+    regular: activeTheme.fontFamily + "-Regular",
+    light: activeTheme.fontFamily + "-Light",
+    thin: activeTheme.fontFamily + "-Thin",
+    medium: activeTheme.fontFamily + "-Medium",
+    semiBold: activeTheme.fontFamily + "-SemiBold",
+    extraBold: activeTheme.fontFamily + "-ExtraBold",
+    black: activeTheme.fontFamily + "-Black",
 }
-
-// export const buttonStyles = StyleSheet.create({
-//     gradient: {
-//         color: rgba(255, 255, 255, 0.1)
-//     }
-// })
-
-
 export const gradientColors = {
-    // colors: [colorsRaw.backgroundRaw, colorsRaw.accentRaw, colorsRaw.buttonBackgroundRaw]
-    // colors: ["red","blue", "green"]
-    colors: [/*colorsRaw.backgroundRaw,theme.accentTheme, */colorsRaw.backgroundRaw, colorsRaw.backgroundAltRaw, theme.accentTheme/*, colorsRaw.textRaw*/]
+    colors: [activeColorsRaw.backgroundRaw, activeColorsRaw.backgroundAltRaw, activeTheme.accentTheme]
 }
-
 
 export const mainStyles = StyleSheet.create({
     main: {
@@ -66,25 +100,29 @@ export const mainStyles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: "column",
         position: "absolute",
-        height: "85%",
+        height: "95%",
+        // padding: 10,
         width: "100%",
         justifyContent: "space-between",
         borderRadius: 10,
     }
 })
 
-export const topThirdStyles = StyleSheet.create({
-    topThird: {
+export const controlPanelStyles = StyleSheet.create({
+    controlPanelContainer: {
         width: "100%",
         borderRadius: 10,
-        flex: 1,
+        // flex: 1,
+        height: "30%",
         flexDirection: "row",
+        position: "absolute",
+        top: 0,
         justifyContent: "flex-start",
         alignItems: "center",
     },
 
     smallContainer: {
-        backgroundColor: theme.accentTheme,
+        backgroundColor: activeTheme.accentTheme,
         borderRadius: 10,
         flexDirection: "row",
         height: "70%",
@@ -113,7 +151,7 @@ export const topThirdStyles = StyleSheet.create({
         paddingBottom: 10,
         borderRadius: 10,
         fontWeight: 'bold',
-        backgroundColor: theme.buttonBackground,
+        backgroundColor: activeTheme.buttonBackground,
         width: "100%",
         height: "100%",
         justifyContent: "center",
@@ -122,7 +160,7 @@ export const topThirdStyles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: "center",
         fontFamily: fontTheme.black,
-        color: theme.textTheme,
+        color: activeTheme.textTheme,
         fontSize: 50,
         fontWeight: 'bold',
     },
@@ -133,24 +171,26 @@ export const topThirdStyles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme.buttonBackground,
+        backgroundColor: activeTheme.buttonBackground,
     },
     smallButtonText: {
         textAlign: 'center',
         fontFamily: fontTheme.black,
-        color: theme.textTheme,
+        color: activeTheme.textTheme,
         fontWeight: 'bold',
         fontSize: 18,
     }
 });
 
-export const middleThirdStyles = StyleSheet.create({
-    middleThird: {
-        flex: 1,
+export const meditationTimerStyles = StyleSheet.create({
+    meditationTimerContainer: {
+        // flex: 1,
         borderRadius: 1000,
+        top: "38%",
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+        position: "absolute",
         zIndex: -1,
     },
     smallContainer: {
@@ -168,47 +208,44 @@ export const middleThirdStyles = StyleSheet.create({
     },
     timeDisplay: {
         fontFamily: fontTheme.regular,
-        color: theme.textTheme,
+        // color: activeTheme.textTheme,
+        color: hexToRGB(activeColorsRaw.accentRaw, 0.5),
         textAlign: "center",
         fontSize: 36,
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
     },
-    smallButton: {
-        width: "100%",
-        padding: 10,
-        borderRadius: 10,
-        backgroundColor: theme.buttonBackground,
-        borderColor: hexToRGB(theme.textTheme, 0.1),
-    },
-    smallButtonText: {
-        paddingVertical: 15,
-        textAlign: 'center',
-        fontFamily: fontTheme.black,
-        color: theme.textTheme,
-        fontWeight: 'bold',
-        fontSize: 18,
-    }
 });
 
-export const bottomThirdStyles = StyleSheet.create({
-    bottomThird: {
+export const configPanelStyles = StyleSheet.create({
+    configPanelContainer: {
         borderRadius: 10,
         width: "100%",
-        flex: 1,
-        flexDirection: "row",
+        // flex: 1,
+        flexDirection: "column",
         justifyContent: "flex-end",
+        position: "absolute",
+        bottom: 0,
+        height: "30%",
         alignItems: "center",
-
+    },
+    smallContainer: {
+        backgroundColor: activeTheme.accentTheme,
+        borderRadius: 10,
+        flexDirection: "row",
+        justifyContent: "space-around",
+        flex: 1,
+        margin: 10,
+        height: "100%",
     },
     selectionMenuRows: {
         flex: 1,
         flexDirection: "row",
-        backgroundColor: theme.buttonBackground,
+        // backgroundColor: activeTheme.buttonBackground,
         borderRadius: 10,
         height: "100%",
         zIndex: 10,
         justifyContent: "space-between",
-        marginVertical: 10,
+        // marginVertical: 10,
     },
     selectionMenuColumns: {
         flexDirection: 'column',
@@ -218,15 +255,7 @@ export const bottomThirdStyles = StyleSheet.create({
         width: "80%",
         justifyContent: "space-between"
     },
-    smallContainer: {
-        backgroundColor: theme.accentTheme,
-        borderRadius: 10,
-        flexDirection: "row",
-        justifyContent: "space-around",
-        flex: 1,
-        margin: 10,
-        height: "50%",
-    },
+
     leftHalf: {
         flexDirection: "column",
         justifyContent: "center",
@@ -246,8 +275,8 @@ export const bottomThirdStyles = StyleSheet.create({
         paddingBottom: 10,
         borderRadius: 10,
         fontWeight: 'bold',
-        backgroundColor: theme.buttonBackground,
-        borderColor: hexToRGB(theme.textTheme, 0.1),
+        backgroundColor: activeTheme.buttonBackground,
+        borderColor: hexToRGB(activeTheme.textTheme, 0.1),
         borderStyle: "solid",
         justifyContent: "center",
     },
@@ -257,13 +286,13 @@ export const bottomThirdStyles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         borderRadius: 10,
-        backgroundColor: theme.buttonBackground,
-        borderColor: hexToRGB(theme.textTheme, 0.1),
+        backgroundColor: activeTheme.buttonBackground,
+        borderColor: hexToRGB(activeTheme.textTheme, 0.1),
     },
     smallButtonText: {
         textAlign: 'center',
         fontFamily: fontTheme.black,
-        color: theme.textTheme,
+        color: activeTheme.textTheme,
         fontWeight: 'bold',
         fontSize: 18,
     }

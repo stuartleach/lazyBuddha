@@ -25,14 +25,6 @@ interface CountdownProps {
 }
 
 interface MeditationTimerProps {
-    started: boolean;
-    duration: number;
-    circleDiameter: number;
-    timeLeftInMilliseconds: number;
-    testID: string;
-}
-
-interface MiddleThirdProps {
     height: any;
     duration: any;
     playing: any;
@@ -40,10 +32,11 @@ interface MiddleThirdProps {
     isRunning: boolean;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
     started: any;
+    timerIsVisible: boolean;
     testID: string
 }
 
-interface BottomThirdProps {
+interface ConfigPanelProps {
     reset: () => void;
     playing: boolean;
     toggleProgress: () => void;
@@ -55,9 +48,11 @@ interface BottomThirdProps {
     onChangeSound: (selectedSound: string) => void;
     setTimeLeftInMilliseconds: (value: number) => void; // Ensure this is defined as a function
     testID: string
+    timerIsVisible: boolean;
+    setTimerIsVisible: (value: boolean) => void;
 }
 
-interface TopThirdProps {
+interface ControlPanelProps {
     playing: boolean;
     started: boolean;
     startSession: () => void;
