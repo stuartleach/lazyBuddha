@@ -5,6 +5,8 @@ import * as Font from 'expo-font'
 import {MeditationScreen} from '@/screens/MeditationScreen/MeditationScreen'
 import {gradientColors} from '@/styles/theme'
 import Svg, {Defs, RadialGradient, Rect, Stop} from 'react-native-svg'
+import {Audio} from 'expo-av'
+import {loadSound} from "@/utils/soundHooks";
 
 const {width, height} = Dimensions.get('window')
 
@@ -12,8 +14,10 @@ SplashScreen.preventAutoHideAsync().then((r) => console.log('SplashScreen.preven
 
 function App() {
     const [appIsReady, setAppIsReady] = useState(false)
-
     useEffect(() => {
+        Audio.setAudioModeAsync({
+            playsInSilentModeIOS: true,
+        })
         async function prepare() {
             try {
                 await Font.loadAsync({
@@ -23,7 +27,10 @@ function App() {
                     'Lato-Light': require('@/assets/fonts/Lato-Light.ttf'),
                     'Lato-Black': require('@/assets/fonts/Lato-Black.ttf'),
                 })
-                // await loadSound("Ocean");
+                await loadSound("Ocean");
+                await loadSound("Sea");
+                await loadSound("Flow");
+                await loadSound("Wave");
             } catch (e) {
                 console.warn('this is a warning', e)
             } finally {
@@ -33,7 +40,7 @@ function App() {
             }
         }
 
-        prepare().then((r) => console.log('prepare()', r))
+        prepare().then((r) => console.log('prepared & ready for liftoff!'))
     }, [])
 
     const onLayoutRootView = useCallback(async () => {

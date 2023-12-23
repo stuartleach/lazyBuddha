@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react'
-import {MeditationTimerProps} from '@/screens/MeditationScreen/MeditationScreen'
 import {Animated, Text, View} from 'react-native'
 import {Circle, Svg} from 'react-native-svg'
-import {activeTheme} from '@/styles'
+import {activeTheme} from '@/styles/theme'
 import {meditationTimerStyles} from '@/styles/theme'
 
 interface CountdownProps {
     timeLeftInMilliseconds: number;
     totalMilliseconds: number;
     circleDiameter: number;
+    isRunning: boolean,
 }
 
 const Countdown: React.FC<CountdownProps> = (props) => {
-    const {timeLeftInMilliseconds, totalMilliseconds, circleDiameter} = props
+    const {timeLeftInMilliseconds, totalMilliseconds, circleDiameter, isRunning} = props
     const progress = totalMilliseconds ? timeLeftInMilliseconds / totalMilliseconds : 0
     const radius = circleDiameter / 2 - 20
     const [strokeWidth, setStrokeWidth] = useState(10)
@@ -38,7 +38,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
                     r={radius}
                     // fill={hexToRGB(theme.textTheme, 0.1)}
                     fill={activeTheme.accentTheme}
-                    stroke={activeTheme.accentTheme}
+                    stroke={activeTheme.backgroundTheme}
                     strokeWidth={strokeWidth}
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
@@ -56,8 +56,8 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     )
 }
 
-export const MeditationTimer = (props: { meditationTimerProps: MeditationTimerProps }) => {
-    const {height, duration, playing, started, timeLeftInMilliseconds, timerIsVisible} = props.meditationTimerProps
+export const MeditationTimer = (meditationTimerProps: { height: any; duration: any; playing: any; started: any; timeLeftInMilliseconds: any; timerIsVisible: any; isRunning: any }) => {
+    const {height, duration, playing, started, timeLeftInMilliseconds, timerIsVisible, isRunning} = meditationTimerProps
     const [opacityAnim] = useState(new Animated.Value(1)) // Start fully visible
 
     useEffect(() => {
@@ -84,6 +84,7 @@ export const MeditationTimer = (props: { meditationTimerProps: MeditationTimerPr
                         timeLeftInMilliseconds={timeLeftInMilliseconds}
                         totalMilliseconds={duration * 60000}
                         circleDiameter={height}
+                        isRunning={isRunning}
                     />
                 </View>
             </View>

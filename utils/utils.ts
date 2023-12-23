@@ -1,3 +1,13 @@
+export const addUnitsToDuration = (duration: number) => {
+    if (duration == 1) {
+        return `${duration} minute`;
+    }
+    if (duration < 1) {
+        return `${duration * 60} seconds`;
+    }
+    return `${duration} minutes`;
+}
+
 export function hexToRGB(hex: string, alpha: number) {
     let r = parseInt(hex.slice(1, 3), 16),
         g = parseInt(hex.slice(3, 5), 16),

@@ -22,8 +22,6 @@
     "hermes-engine": ">=0.7.0 <0.8.0"
   },
   "dependencies": {
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-    "@babel/plugin-transform-export-namespace-from": "^7.23.4",
     "@babel/preset-react": "^7.23.3",
     "@babel/runtime": "^7.23.6",
     "@expo-google-fonts/quicksand": "^0.2.3",
@@ -31,7 +29,7 @@
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "babel-preset-react-app": "^10.0.1",
     "css-select": "^5.1.0",
@@ -47,6 +45,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
+    "@react-native-community/blur": "^4.3.2",
     "react-native-gesture-handler": "~2.12.1",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-picker-select": "^9.0.0",
@@ -55,7 +54,6 @@
     "react-native-screens": "~3.22.1",
     "react-native-svg": "13.9.0",
     "react-native-web": "~0.19.9",
-    "tailwind-react-native-classnames": "^1.5.1",
     "twrnc": "^3.6.7",
     "vector-icons": "^0.1.0"
   },

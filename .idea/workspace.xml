@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Screenshots/2023_12_22.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/declarations.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/declarations.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/consts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/SettingsScreen/SettingsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SettingsScreen/SettingsScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/hooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/soundUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/soundUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/timerUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/timerUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +104,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -108,6 +128,8 @@
     "Jest.MiddleThird.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "true",
     "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
     "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
@@ -115,6 +137,7 @@
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "android.gradle.sync.needed": "true",
+    "go.import.settings.migrated": "true",
     "javascript.nodejs.core.library.configured.version": "21.2.0",
     "javascript.nodejs.core.library.typings.version": "20.10.5",
     "kotlin-language-version-configured": "true",
@@ -145,88 +168,17 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Screenshots" />
       <recent name="$PROJECT_DIR$/screens/MeditationScreen" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/components/shared" />
       <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/MeditationScreen.tsx" />
       <recent name="$PROJECT_DIR$/Controls.tsx" />
       <recent name="$PROJECT_DIR$/BuddhaButton.tsx" />
     </key>
-  </component>
-  <component name="RunManager" selected="npm.start --clear">
-    <configuration name="MiddleThird" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/screens/MeditationScreen/MiddleThird.test.tsx" />
-      <test-names>
-        <test-name value="MiddleThird" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ios" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ios" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start --clear" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <arguments value="--clear" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="web" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="web" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Jest.MiddleThird" />
-      <item itemvalue="npm.test" />
-      <item itemvalue="npm.ios" />
-      <item itemvalue="npm.start --clear" />
-      <item itemvalue="npm.web" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.start --clear" />
-        <item itemvalue="Jest.MiddleThird" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.web" />
-        <item itemvalue="npm.ios" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -252,6 +204,8 @@
       <workItem from="1703089620806" duration="5239000" />
       <workItem from="1703095767104" duration="9954000" />
       <workItem from="1703183738891" duration="257000" />
+      <workItem from="1703183997013" duration="25911000" />
+      <workItem from="1703345879306" duration="220000" />
     </task>
     <servers />
   </component>
@@ -260,6 +214,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

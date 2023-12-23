@@ -1,16 +1,11 @@
-import {hexToRGB} from "@/utils";
 import {StyleSheet} from "react-native";
-import LinearGradient from 'react-native-linear-gradient';
-
-import React from 'react';
-import {View, Text} from 'react-native';
+import {hexToRGB} from "@/utils/utils";
 
 
 const themes = {
     "ocean": {
         backgroundRaw: "#46A9CA",
         backgroundAltRaw: "#38BAF0",
-        // textRaw: "#001C45",
         textRaw: "#1A142F",
         buttonBackgroundRaw: "#81C7DD",
         accentRaw: "#FEFADC",
@@ -29,27 +24,34 @@ const themes = {
         buttonBackgroundRaw: "#F48C06",
         accentRaw: "#E85D04",
     },
-    "earth": {
-        backgroundRaw: "#A2D729",
-        backgroundAltRaw: "#8AC926",
-        textRaw: "#FFD166",
-        buttonBackgroundRaw: "#FF9F1C",
-        accentRaw: "#FF9F1C",
+    "wind": {
+        backgroundRaw: "#ffffff",
+        backgroundAltRaw: "#d2d2d2",
+        textRaw: "#232323",
+        buttonBackgroundRaw: "#e5e5e5",
+        accentRaw: "#968a8a",
     },
     "sky": {
-        backgroundRaw: "#0D3B66",
+        backgroundRaw: "#40719b",
         backgroundAltRaw: "#0D3B66",
-        textRaw: "#FAF0CA",
-        buttonBackgroundRaw: "#F95738",
-        accentRaw: "#F95738",
+        textRaw: "#ffffff",
+        buttonBackgroundRaw: "#406e95",
+        accentRaw: "#5367a1",
     },
-    "sun": {
-        backgroundRaw: "#FFC300",
-        backgroundAltRaw: "#FFC300",
-        textRaw: "#581845",
-        buttonBackgroundRaw: "#900C3F",
-        accentRaw: "#900C3F",
+    "whiteNoise": {
+        backgroundRaw: "#ffffff",
+        backgroundAltRaw: "#ffffff",
+        textRaw: "#000000",
+        buttonBackgroundRaw: "#cb9595",
+        accentRaw: "#8d4c65",
     },
+    "cafe" : {
+        backgroundRaw: "#726f61",
+        backgroundAltRaw: "#3f2a2a",
+        textRaw: "#efeeef",
+        buttonBackgroundRaw: "#75665c",
+        accentRaw: "#ffedcd",
+    }
 }
 
 const themeSelection = "ocean";
@@ -186,12 +188,11 @@ export const meditationTimerStyles = StyleSheet.create({
     meditationTimerContainer: {
         // flex: 1,
         borderRadius: 1000,
-        top: "38%",
+        top: "35%",
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        zIndex: -1,
     },
     smallContainer: {
         borderRadius: 10,
@@ -208,11 +209,10 @@ export const meditationTimerStyles = StyleSheet.create({
     },
     timeDisplay: {
         fontFamily: fontTheme.regular,
-        // color: activeTheme.textTheme,
-        color: hexToRGB(activeColorsRaw.accentRaw, 0.5),
+        // color: hexToRGB(activeColorsRaw.textRaw, 0.5),
+        color: activeColorsRaw.textRaw,
         textAlign: "center",
         fontSize: 36,
-        // fontWeight: 'bold',
     },
 });
 
@@ -256,7 +256,7 @@ export const configPanelStyles = StyleSheet.create({
         justifyContent: "space-between"
     },
 
-    half: {
+    smaller: {
         // flexDirection: "column",
         // justifyContent: "center",
         flex: 1,
