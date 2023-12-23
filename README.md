@@ -3,7 +3,7 @@
 # Lazy Buddha
 is a meditation timer without the usual bloat and freemium nonsense. It's free and open source, and it will (soon) be available for Android and iOS.
 
-![Screenshot as of 2023_12_20](./Screenshots/2023_12_20.png)
+![Screenshot as of 2023_12_23](./Screenshots/2023_12_23.png)
 
 ## Why?
 I wanted a simple meditation timer that I could use on my phone. I didn't want to pay for it, and I didn't want to be tracked or have ads. I also didn't want to have to create an account or log in. I just wanted to meditate.
