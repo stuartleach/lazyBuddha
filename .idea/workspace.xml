@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bc32cc2-cf8f-4341-95a6-a8720c8e5e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Screenshots/2023_12_22.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/declarations.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/declarations.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sounds/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ConfigPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/ControlPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeditationScreen/MeditationTimer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeditationScreen/consts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/SettingsScreen/SettingsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SettingsScreen/SettingsScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/hooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hooks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/soundUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/soundUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/timerUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/timerUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/node_modules/@react-native-community/cli-platform-android">
@@ -121,47 +103,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Jest.MiddleThird.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "android.gradle.sync.needed": "true",
-    "go.import.settings.migrated": "true",
-    "javascript.nodejs.core.library.configured.version": "21.2.0",
-    "javascript.nodejs.core.library.typings.version": "20.10.5",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/jest",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.ios.executor": "Run",
-    "npm.start --clear.executor": "Run",
-    "npm.start.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.web.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Jest.MiddleThird.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;21.2.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.10.5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/jest&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.ios.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start --clear.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/stuartleach/Dropbox/Coding/dotnyc/lazy-stuff/lazyBuddha/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Screenshots" />
@@ -175,9 +157,11 @@
       <recent name="$PROJECT_DIR$/utils" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/components/shared/CustomPressable.tsx" />
+      <recent name="$PROJECT_DIR$/utils/timerHooks.tsx" />
+      <recent name="$PROJECT_DIR$/utils/utils.ts" />
       <recent name="$PROJECT_DIR$/MeditationScreen.tsx" />
       <recent name="$PROJECT_DIR$/Controls.tsx" />
-      <recent name="$PROJECT_DIR$/BuddhaButton.tsx" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -206,6 +190,11 @@
       <workItem from="1703183738891" duration="257000" />
       <workItem from="1703183997013" duration="25911000" />
       <workItem from="1703345879306" duration="220000" />
+      <workItem from="1703350688336" duration="11035000" />
+      <workItem from="1705592143287" duration="70874000" />
+      <workItem from="1707679998596" duration="533000" />
+      <workItem from="1707680535318" duration="5000" />
+      <workItem from="1707680629029" duration="1043000" />
     </task>
     <servers />
   </component>

@@ -5,5 +5,5 @@
     "singleQuote": true,
     "jsxSingleQuote": true,
     "printWidth": 120,
-    "ignorePath": "./node_modules/**",
+    "ignorePath": "./node_modules/**"
 }

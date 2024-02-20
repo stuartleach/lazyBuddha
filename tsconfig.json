@@ -12,7 +12,7 @@
         "./*"
       ]
     },
-    "extends": "expo/tsconfig.base",
+    // "extends": "expo/tsconfig.base",
     "allowSyntheticDefaultImports": true
   },
   "extends": "expo/tsconfig.base"
