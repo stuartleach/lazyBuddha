@@ -1,23 +1,23 @@
-import React, {useCallback, useEffect, useState} from 'react'
-import {Dimensions, StyleSheet, View} from 'react-native' // or from 'react-native-paper' or any other UI library you're using
-import * as SplashScreen from 'expo-splash-screen'
-import * as Font from 'expo-font'
-import {MeditationScreen} from '@/screens/MeditationScreen/MeditationScreen'
-import {gradientColors} from '@/styles/theme'
-import Svg, {Defs, RadialGradient, Rect, Stop} from 'react-native-svg'
-import {Audio} from 'expo-av'
-import {loadSound} from "@/utils/soundHooks";
+import React, { useCallback, useEffect, useState } from 'react';
+import { Dimensions, StyleSheet, View } from 'react-native'; // or from 'react-native-paper' or any other UI library you're using
+import * as SplashScreen from 'expo-splash-screen';
+import * as Font from 'expo-font';
+import { MeditationScreen } from '@/screens/MeditationScreen/MeditationScreen';
+import { gradientColors } from '@/styles/theme';
+import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
+import { Audio } from 'expo-av';
+import { loadSound } from '@/utils/soundHooks';
 
-const {width, height} = Dimensions.get('window')
+const { width, height } = Dimensions.get('window');
 
-SplashScreen.preventAutoHideAsync().then((r) => console.log('SplashScreen.preventAutoHideAsync()', r))
+SplashScreen.preventAutoHideAsync().then((r) => console.log('SplashScreen.preventAutoHideAsync()', r));
 
 function App() {
-    const [appIsReady, setAppIsReady] = useState(false)
+    const [appIsReady, setAppIsReady] = useState(false);
     useEffect(() => {
         Audio.setAudioModeAsync({
             playsInSilentModeIOS: true,
-        })
+        });
         async function prepare() {
             try {
                 await Font.loadAsync({
@@ -26,22 +26,22 @@ function App() {
                     'Lato-Thin': require('@/assets/fonts/Lato-Thin.ttf'),
                     'Lato-Light': require('@/assets/fonts/Lato-Light.ttf'),
                     'Lato-Black': require('@/assets/fonts/Lato-Black.ttf'),
-                })
-                await loadSound("Ocean");
-                await loadSound("Sea");
-                await loadSound("Flow");
-                await loadSound("Wave");
+                });
+                await loadSound('Ocean');
+                await loadSound('Sea');
+                await loadSound('Flow');
+                await loadSound('Wave');
             } catch (e) {
-                console.warn('this is a warning', e)
+                console.warn('this is a warning', e);
             } finally {
                 // Tell the application to render
-                console.log('Done loading resources, rendering app')
-                setAppIsReady(true)
+                console.log('Done loading resources, rendering app');
+                setAppIsReady(true);
             }
         }
 
-        prepare().then((r) => console.log('prepared & ready for liftoff!'))
-    }, [])
+        prepare().then((r) => console.log('prepared & ready for liftoff!'));
+    }, []);
 
     const onLayoutRootView = useCallback(async () => {
         if (appIsReady) {
@@ -50,16 +50,16 @@ function App() {
             // loading its initial state and rendering its first pixels. So instead,
             // we hide the splash screen once we know the root view has already
             // performed layout.
-            await SplashScreen.hideAsync()
+            await SplashScreen.hideAsync();
         }
-    }, [appIsReady])
+    }, [appIsReady]);
 
     if (!appIsReady) {
-        console.log('App is not ready, rendering splash screen')
-        return null
+        console.log('App is not ready, rendering splash screen');
+        return null;
     }
 
-    console.log('App is ready, rendering app')
+    console.log('App is ready, rendering app');
 
     return (
         <View style={styles.container}>
@@ -77,13 +77,13 @@ function App() {
                         ))}
                     </RadialGradient>
                 </Defs>
-                <Rect x={(-1 * width) / 2} y='0' width={width * 2} height={height} fill='url(#grad)'/>
+                <Rect x={(-1 * width) / 2} y='0' width={width * 2} height={height} fill='url(#grad)' />
             </Svg>
             <View onLayout={onLayoutRootView} style={styles.content}>
-                <MeditationScreen/>
+                <MeditationScreen />
             </View>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -97,6 +97,6 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
     },
-})
+});
 
-export default App
+export default App;
